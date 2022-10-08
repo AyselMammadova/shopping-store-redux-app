@@ -1,0 +1,39 @@
+.menuIcon span {
+    transition: all 0.5s ease-in-out;
+}
+
+.menuIcon span::before,
+.menuIcon span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 1.6px;
+    background: #FF0000;
+    border-radius: 4px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menuIcon span::before {
+    transform: translateY(6px);
+}
+
+.menuIcon span::after {
+    transform: translateY(-6px);
+}
+
+.openedMenu span {
+    transform: translateX(-50px);
+    background: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.openedMenu span::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    transition: all 0.5s ease-in-out;
+}
+
+.openedMenu span::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    transition: all 0.5s ease-in-out;
+}

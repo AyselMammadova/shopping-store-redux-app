@@ -24,9 +24,9 @@ const Header = () => {
                         <img src="/images/tr.svg" alt="tr" className="mr-[7px]" />
                         <div>
                             İstanbul  
-                            <span className="text-grey relative -top-px mx-[7px]">|</span>  
+                            <span className="text-grey relative -top-[1px] mx-[7px]">|</span>  
                             TR  
-                            <span className="text-grey relative -top-px mx-[7px]">|</span>
+                            <span className="text-grey relative -top-[1px] mx-[7px]">|</span>
                             TRY
                         </div>
                     </div>

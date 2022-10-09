@@ -17,7 +17,12 @@ module.exports = {
       lg: ['18px', '23px'],
       xl: ['24px', '32px'],
     },
+    letterSpacing: {
+      sl: '.019em',
+      wider: '.05em',
+    },
     colors: {
+      transparent: 'transparent',
       white: '#fff',
       red: '#FF0000',
       lred: '#FAF3F3',
@@ -25,11 +30,14 @@ module.exports = {
       grey1: 'rgba(0, 0, 0, 0.4)',
       grey2: 'rgba(196, 196, 196, 0.3)',
       grey3: '#FFFFFF1A',
+      grey4: '#959595',
       light: '#F8F8F8',
       bl: '#26282B',
       bl2: '#221F23',
+      bl3: 'rgba(0, 0, 0, 0.9)',
       lwhite: 'rgba(255, 255, 255, 0.1)',
-      lwhite2: '#FEFEFE'
+      lwhite2: '#FEFEFE',
+      lwhite3: '#CECECE'
     },
     container: {
       padding: {
@@ -47,11 +55,13 @@ module.exports = {
       '2md': '991px',
       'lg': '1024px',
       'xl': '1280px',
+      'xxl': '1400px',
       '2xl': '1536px',
       '3xl': '1720px',
     },
     margin: {
       'auto': 'auto',
+      '0': '0',
       '4px': '4px',
       '6px': '6px',
       '7px': '7px',
@@ -60,6 +70,8 @@ module.exports = {
       '10px': '10px',
       '15px': '15px',
       '20px': '20px',
+      '30px': '30px',
+      '38px': '38px',
       '40px': '40px',
       '41px': '41px',
       '46px': '46px',
@@ -79,6 +91,7 @@ module.exports = {
       '30px': '30px',
       '34px': '34px',
       '48px': '48px',
+      '84px': '84px',
       '120px': '120px'
     },
     borderRadius: {
@@ -90,22 +103,30 @@ module.exports = {
     width: {
       '16px': '16px',
       '36px': '36px',
+      '188px': '188px',
       '256px': '256px',
       '390px': '390px',
       '610px': '610px',
       '60%': '60%',
-      '100%': '100%'
+      '100%': '100%',
+      'maxContent': 'max-content'
     },
     height: {
       '1.6px': '1.6px',
       '34px': '34px',
       '36px': '36px',
+      '40px': '40px',
       '50px': '50px'
     },
     minWidth: {
       '30px': '30px',
     },
+    maxHeight: {
+      '700px': '700px',
+      '960px': '960px'
+    },
     inset: {
+      '1px': '1px',
       '9px': '9px',
       '50%': '50%'
     },

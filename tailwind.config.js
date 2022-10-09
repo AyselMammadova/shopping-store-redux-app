@@ -12,6 +12,7 @@ module.exports = {
     },
     fontSize: {
       xsm: ['12px', '15px'],
+      xxsm: ['13px', '16px'],
       sm: ['14px', '18px'],
       base: ['16px', '20px'],
       lg: ['18px', '23px'],
@@ -24,6 +25,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       white: '#fff',
+      black: '#000',
       red: '#FF0000',
       lred: '#FAF3F3',
       grey: '#D5D5D5',
@@ -31,13 +33,24 @@ module.exports = {
       grey2: 'rgba(196, 196, 196, 0.3)',
       grey3: '#FFFFFF1A',
       grey4: '#959595',
+      grey5: '#A5A5A5',
       light: '#F8F8F8',
       bl: '#26282B',
       bl2: '#221F23',
       bl3: 'rgba(0, 0, 0, 0.9)',
       lwhite: 'rgba(255, 255, 255, 0.1)',
       lwhite2: '#FEFEFE',
-      lwhite3: '#CECECE'
+      lwhite3: '#CECECE',
+      lwhite4: '#c4c4c414',
+      dgrey: '#606060',
+      dgrey2: '#BBBBBB',
+      bord: 'rgba(196, 196, 196, 0.7)',
+      bord1: '#EDEDED',
+      bord2: '#D7D7D7',
+      tx: '#666666',
+      tx1: '#696969',
+      
+
     },
     container: {
       padding: {
@@ -63,13 +76,16 @@ module.exports = {
       'auto': 'auto',
       '0': '0',
       '4px': '4px',
+      '5px': '5px',
       '6px': '6px',
       '7px': '7px',
       '8px': '8px',
       '9px': '9px',
       '10px': '10px',
       '15px': '15px',
+      '16px': '16px',
       '20px': '20px',
+      '25px': '25px',
       '30px': '30px',
       '38px': '38px',
       '40px': '40px',
@@ -80,8 +96,12 @@ module.exports = {
       '76px': '76px',
     },
     padding: {
+      '7px': '7px',
+      '8px': '8px',
       '9px': '9px',
       '10px': '10px',
+      '11px': '11px',
+      '12px': '12px',
       '14px': '14px',
       '15px': '15px',
       '16px': '16px',
@@ -90,6 +110,7 @@ module.exports = {
       '27px': '27px',
       '30px': '30px',
       '34px': '34px',
+      '38px': '38px',
       '48px': '48px',
       '84px': '84px',
       '120px': '120px'
@@ -98,11 +119,19 @@ module.exports = {
       'none': '0',
       'small': '4px',
       'medium': '8px',
+      '15px': '15px',
       'large': '36px',
+      '1000px': '1000px'
     },
     width: {
+      '0': '0',
+      '8px': '8px',
       '16px': '16px',
+      '24px': '24px',
       '36px': '36px',
+      '68px': '68px',
+      '84px': '84px',
+      '134px': '134px',
       '188px': '188px',
       '256px': '256px',
       '390px': '390px',
@@ -112,29 +141,43 @@ module.exports = {
       'maxContent': 'max-content'
     },
     height: {
+      '0': '0',
       '1.6px': '1.6px',
+      '24px': '24px',
       '34px': '34px',
       '36px': '36px',
       '40px': '40px',
-      '50px': '50px'
+      '50px': '50px',
+      '420px': '420px'
     },
     minWidth: {
       '30px': '30px',
+      '65px': '65px'
     },
     maxHeight: {
+      '184px': '184px',
+      '190px': '190px',
+      '212px': '212px',
+      '294px': '294px',
       '700px': '700px',
       '960px': '960px'
     },
     inset: {
+      '0': '0',
       '1px': '1px',
+      '2px': '2px',
+      '3px': '3px',
       '9px': '9px',
+      '20px': '20px',
       '50%': '50%'
     },
     boxShadow: {
       'shadow1': '0px 4px 4px rgba(217, 7, 9, 0.23)',
       'shadow2': '0px 3px 7px rgba(217, 7, 9, 0.2)',
       'shadow3': '0px 2px 10px rgba(0, 0, 0, 0.02)',
-      'shadow4': '0px 4px 30px rgba(0, 0, 0, 0.1)'
+      'shadow4': '0px 4px 30px rgba(0, 0, 0, 0.1)',
+      'shadow5': '0px 2px 10px rgba(0, 0, 0, 0.05)',
+      'shadow6': '-2px 0px 3px rgba(0, 0, 0, 0.1)'
     }
   },
   plugins: [

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.3",
+    "@material-tailwind/react": "^1.2.4",
     "flowbite-react": "^0.1.12",
     "heroicons": "^2.0.12",
     "next": "12.3.1",

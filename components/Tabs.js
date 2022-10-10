@@ -78,11 +78,9 @@ const Tabs = () => {
                           <Tags />
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 xxl:grid-cols-3 3xl:grid-cols-4 gap-8 2md:mt-[20px]">
-                          <Provider store={store}>
-                            <Product />
-                          </Provider>
-                        </div>
+                        <Provider store={store}>
+                          <Product />
+                        </Provider>
                     </div>
                   </div>
                 </div>

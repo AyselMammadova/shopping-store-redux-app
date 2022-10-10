@@ -1,8 +1,8 @@
-import {configureStore} from '@reduxjs/toolkit';
-import PostReducer from './features/postSlice';
+import {legacy_createStore as createStore, applyMiddleware} from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import rootReducer from './reducer';
 
-export default configureStore({
-    reducer: {
-        post: PostReducer
-    }
-})
+const composedEnhancer = applyMiddleware(thunkMiddleware);
+const store = createStore(rootReducer, composedEnhancer);
+
+export default store;

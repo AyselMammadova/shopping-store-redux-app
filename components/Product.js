@@ -2,10 +2,12 @@ import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { GetProductList } from '../redux/features/productSlice';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import FadeLoader from 'react-spinners/FadeLoader'
 
 
 const Product = () => {
 
+    // get products
     const dispatch = useDispatch();
 
     const [page, setPage] = useState(0);
@@ -60,11 +62,11 @@ const Product = () => {
                 dataLength={cards.length} 
                 next={fetchProducts}
                 hasMore={hasMore}
-                loader={<h4>Loading...</h4>}
+                loader={<FadeLoader color="#000" className="mx-auto" />}
                 className="grid grid-cols-1 md:grid-cols-2 xxl:grid-cols-3 3xl:grid-cols-4 gap-8 2md:mt-[20px]"
             >
 
-                {cards.slice(0, 50).map((card) => (
+                {cards.map((card) => (
                     <div key={card.id} className="product-item rounded-[8px] bg-white shadow-shadow5 hover:shadow-shadow7 overflow-hidden cursor-pointer transition ease-in duration-150"
                     onMouseEnter={() => handleMouseEnter(card.id)}
                     onMouseLeave={handleMouseLeave}>

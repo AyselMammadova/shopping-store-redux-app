@@ -198,7 +198,7 @@ const Sidebar = () => {
                         </label>
                     </div>
 
-                    <button className="rounded-[4px] bg-red w-[68px] h-[40px] flex items-center justify-center">
+                    <button className="rounded-[4px] bg-red w-[84px] mt-[8px] xl:mt-0 xl:w-[68px] h-[40px] flex items-center justify-center">
                         <img src="/images/w-search.svg" alt="search" />
                     </button>
                     

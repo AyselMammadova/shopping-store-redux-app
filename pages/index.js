@@ -20,7 +20,7 @@ export default function Home() {
       <Categories />
 
       <main className="bg-lwhite4 py-[15px]">
-        <div className="container">
+        <div className="container max-w-[100%]">
           <Breadcrumb />
           <Tabs />
         </div>

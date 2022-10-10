@@ -16,6 +16,7 @@ module.exports = {
       sm: ['14px', '18px'],
       base: ['16px', '20px'],
       lg: ['18px', '23px'],
+      llg: ['21px', '27px'],
       xl: ['24px', '32px'],
     },
     letterSpacing: {
@@ -107,6 +108,7 @@ module.exports = {
       '16px': '16px',
       '18px': '18px',
       '20px': '20px',
+      '25px': '25px',
       '27px': '27px',
       '30px': '30px',
       '34px': '34px',
@@ -121,11 +123,13 @@ module.exports = {
       'medium': '8px',
       '15px': '15px',
       'large': '36px',
-      '1000px': '1000px'
+      '1000px': '1000px',
+      '50%': '50%'
     },
     width: {
       '0': '0',
       '8px': '8px',
+      '11px': '11px',
       '16px': '16px',
       '24px': '24px',
       '36px': '36px',
@@ -143,16 +147,22 @@ module.exports = {
     height: {
       '0': '0',
       '1.6px': '1.6px',
+      '11px': '11px',
+      '16px': '16px',
       '24px': '24px',
       '34px': '34px',
       '36px': '36px',
       '40px': '40px',
       '50px': '50px',
-      '420px': '420px'
+      '420px': '420px',
+      '100%': '100%'
     },
     minWidth: {
       '30px': '30px',
       '65px': '65px'
+    },
+    maxWidth: {
+      '100%': '100%'
     },
     maxHeight: {
       '184px': '184px',
@@ -168,6 +178,8 @@ module.exports = {
       '2px': '2px',
       '3px': '3px',
       '9px': '9px',
+      '10px': '10px',
+      '17px': '17px',
       '20px': '20px',
       '50%': '50%'
     },
@@ -177,7 +189,8 @@ module.exports = {
       'shadow3': '0px 2px 10px rgba(0, 0, 0, 0.02)',
       'shadow4': '0px 4px 30px rgba(0, 0, 0, 0.1)',
       'shadow5': '0px 2px 10px rgba(0, 0, 0, 0.05)',
-      'shadow6': '-2px 0px 3px rgba(0, 0, 0, 0.1)'
+      'shadow6': '-2px 0px 3px rgba(0, 0, 0, 0.1)',
+      'shadow7': '0px 15px 40px rgba(0, 0, 0, 0.15)'
     }
   },
   plugins: [

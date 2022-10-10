@@ -69,18 +69,18 @@ const Tabs = () => {
             <div>
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <div className="grid grid-cols-12 gap-8">
-                      <div className="hidden sm:block col-span-4 2md:col-span-3">
+                  <div className="grid sm:grid-cols-12 gap-8">
+                      <div className="hidden sm:block sm:col-span-4 2md:col-span-3">
                         <Sidebar />
                       </div>
-                      <div className="col-span-12 sm:col-span-8 2md:col-span-9">
+                      <div className="col-span-1 sm:col-span-8 2md:col-span-9">
                         <div className="hidden 2md:block">
                           <Tags />
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 xxl:grid-cols-3 3xl:grid-cols-4 gap-8 2md:mt-[20px]">
                           <Provider store={store}>
-                            <Product fav={false} />
+                            <Product />
                           </Provider>
                         </div>
                     </div>

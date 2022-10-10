@@ -33,7 +33,7 @@ const BaseCategories = () => {
                     </Menu.Button>
 
                     <Transition
-                        className="absolute z-10 w-[100%]"
+                        className="absolute z-10 w-calc34"
                         show={open}
                         enter="transition duration-50 ease-out"
                         enterFrom="transform scale-95 opacity-0"

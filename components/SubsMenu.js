@@ -9,7 +9,7 @@ export const SubsMenu = () => {
 
     return (
         <>
-            <div className="subCategories w-[maxContent] 2md:w-[100%] pl-[36px] xxl:px-[84px]">
+            <div className="subCategories hidden sm:block w-[100%] pl-[36px] xxl:px-[84px] pr-[8px] 2md:pr-0">
                 <div className="genders 2md:flex items-center">
                     {genders.map((gender, i) => (
                         <div key={i} className={`${

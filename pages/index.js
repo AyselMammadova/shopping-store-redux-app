@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Tabs from '../components/Tabs';
 import {ToastContainer} from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css"
+import Up from '../components/Up';
 
 
 export default function Home() {
@@ -22,6 +23,10 @@ export default function Home() {
       <Categories />
 
       <ToastContainer />
+
+      <div className="right-side-features fixed right-[3%] top-[40%] z-10">
+        <Up />
+      </div>
 
       <main className="bg-lwhite4 py-[15px]">
         <div className="container max-w-[100%]">

@@ -17,7 +17,9 @@ module.exports = {
       base: ['16px', '20px'],
       lg: ['18px', '23px'],
       llg: ['21px', '27px'],
+      lgg: ['22px', '28px'],
       xl: ['24px', '32px'],
+      xxl: ['28px', '35px']
     },
     letterSpacing: {
       sl: '.019em',
@@ -81,6 +83,7 @@ module.exports = {
     margin: {
       'auto': 'auto',
       '0': '0',
+      '2': '2',
       '4px': '4px',
       '5px': '5px',
       '6px': '6px',
@@ -88,11 +91,14 @@ module.exports = {
       '8px': '8px',
       '9px': '9px',
       '10px': '10px',
+      '12px': '12px',
       '15px': '15px',
       '16px': '16px',
+      '18px': '18px',
       '20px': '20px',
       '25px': '25px',
       '30px': '30px',
+      '34px': '34px',
       '38px': '38px',
       '40px': '40px',
       '41px': '41px',
@@ -117,12 +123,15 @@ module.exports = {
       '16px': '16px',
       '18px': '18px',
       '20px': '20px',
+      '24px': '24px',
       '25px': '25px',
       '26px': '26px',
       '27px': '27px',
       '30px': '30px',
       '34px': '34px',
+      '35px': '35px',
       '38px': '38px',
+      '40px': '40px',
       '48px': '48px',
       '84px': '84px',
       '120px': '120px'
@@ -158,6 +167,7 @@ module.exports = {
       '390px': '390px',
       '400px': '400px',
       '610px': '610px',
+      '45%': '45%',
       '60%': '60%',
       '70%': '70%',
       '100%': '100%',
@@ -177,7 +187,10 @@ module.exports = {
       '50px': '50px',
       '90px': '90px',
       '101px': '101px',
+      '155px': '155px',
+      '180px': '180px',
       '420px': '420px',
+      '670px': '670px',
       '100%': '100%',
       '100vh': '100vh',
       'hcalc': 'calc(100vh - 310px)'
@@ -222,7 +235,8 @@ module.exports = {
       'shadow4': '0px 4px 30px rgba(0, 0, 0, 0.1)',
       'shadow5': '0px 2px 10px rgba(0, 0, 0, 0.05)',
       'shadow6': '-2px 0px 3px rgba(0, 0, 0, 0.1)',
-      'shadow7': '0px 15px 40px rgba(0, 0, 0, 0.15)'
+      'shadow7': '0px 15px 40px rgba(0, 0, 0, 0.15)',
+      'shadow8': '0px 0px 10px rgba(0, 0, 0, 0.1)'
     }
   },
   plugins: [

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Product from "./Product";
 import Sidebar from "./Sidebar";
 import Tags from "./Tags";
+import Select from "react-select";
 
 
 const Tabs = () => {
@@ -13,6 +14,57 @@ const Tabs = () => {
     { id: 3, name: "İndirimler" },
     { id: 4, name: "Çok satanlar" },
   ];
+
+  // select
+  const orders = [
+    { value: 'asc', label: 'Köhnədən Yeniyə' },
+    { value: 'desc', label: 'Yenidən Köhnəyə' },
+    { value: 'abc', label: 'A-dan Z-ə' },
+    { value: 'cba', label: 'Z-dən A-ya' }
+  ]
+
+  const customStyles = {
+      control: (base, state) => ({
+          ...base,
+          borderRadius: "8px",
+          border: "1px solid rgba(196, 196, 196, 0.7)",
+          boxShadow: "none",
+          background: '#fff',
+          fontSize: '14px',
+          lineHeight: '18px',
+          cursor: 'pointer',
+          height: '40px',
+          "&:hover": {
+              border: "1px solid rgba(196, 196, 196, 0.7)",
+              boxShadow: "none"
+          }
+      }),
+      placeholder: (base, state) => ({
+          ...base,
+          color: '#666666'
+      }),
+      dropdownIndicator: (base, state) => ({
+          ...base,
+          color: '#53535380'
+      }),
+      option: (base, state) => ({
+          ...base,
+          color: "#000",
+          backgroundColor: state.isSelected ? "#FAF9F9" : "#fff",
+          cursor: state.isSelected ? "none" : "pointer",
+          "&:hover": {
+              backgroundColor: state.isSelected ? "#FAF9F9" : "#fff"
+          }
+      }),
+  };
+
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleChange = (selectedOption) => {
+    setSelectedOption(selectedOption)
+  }
+
+
 
   return (
     <>
@@ -54,12 +106,16 @@ const Tabs = () => {
               ))}
             </ul>
 
-            <div className="flex items-center order-drop text-sm text-tx border border-solid rounded-[8px] border-bord h-[40px] px-[12px] cursor-pointer mt-[10px] md-mt-0">
-              Sıralama seçin
-              <img
-                src="/images/arrow-down.svg"
-                alt="down"
-                className="ml-[15px]"
+            <div className="mt-[10px] md-mt-0">
+              <Select 
+                value={selectedOption}
+                onChange={handleChange}
+                styles={customStyles}
+                options={orders} 
+                placeholder={<div>Sıralama seçin</div>} 
+                components={{
+                    IndicatorSeparator: () => null
+                }}
               />
             </div>
           </div>

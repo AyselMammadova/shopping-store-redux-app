@@ -2,8 +2,7 @@ import React from "react";
 import Product from "./Product";
 import Sidebar from "./Sidebar";
 import Tags from "./Tags";
-import { Provider } from 'react-redux';
-import store from '../redux/store';
+
 
 const Tabs = () => {
   const [openTab, setOpenTab] = React.useState(1);
@@ -73,14 +72,62 @@ const Tabs = () => {
                       <div className="hidden sm:block sm:col-span-4 2md:col-span-3">
                         <Sidebar />
                       </div>
+
                       <div className="col-span-1 sm:col-span-8 2md:col-span-9">
                         <div className="hidden 2md:block">
                           <Tags />
                         </div>
 
-                        <Provider store={store}>
-                          <Product />
-                        </Provider>
+                        <Product />
+
+                    </div>
+                  </div>
+                </div>
+
+                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
+                  <div className="grid sm:grid-cols-12 gap-8">
+                      <div className="hidden sm:block sm:col-span-4 2md:col-span-3">
+                        <Sidebar />
+                      </div>
+                      <div className="col-span-1 sm:col-span-8 2md:col-span-9">
+                        <div className="hidden 2md:block">
+                          <Tags />
+                        </div>
+
+                        <h6 className="2md:mt-[20px]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto totam, animi perferendis iure error aperiam. Aspernatur sit qui nulla obcaecati deserunt suscipit libero, provident beatae optio ipsum tempora laboriosam ducimus!</h6>
+                    
+                    </div>
+                  </div>
+                </div>
+
+                <div className={openTab === 3 ? "block" : "hidden"} id="link3">
+                  <div className="grid sm:grid-cols-12 gap-8">
+                      <div className="hidden sm:block sm:col-span-4 2md:col-span-3">
+                        <Sidebar />
+                      </div>
+                      <div className="col-span-1 sm:col-span-8 2md:col-span-9">
+                        <div className="hidden 2md:block">
+                          <Tags />
+                        </div>
+
+                        <h6 className="2md:mt-[20px]">Lorem ipsum testtttt</h6>
+                    
+                    </div>
+                  </div>
+                </div>
+
+                <div className={openTab === 4 ? "block" : "hidden"} id="link4">
+                  <div className="grid sm:grid-cols-12 gap-8">
+                      <div className="hidden sm:block sm:col-span-4 2md:col-span-3">
+                        <Sidebar />
+                      </div>
+                      <div className="col-span-1 sm:col-span-8 2md:col-span-9">
+                        <div className="hidden 2md:block">
+                          <Tags />
+                        </div>
+
+                        <h6 className="2md:mt-[20px]">Lorem ipsum, dolor sit amet consectetur</h6>
+                    
                     </div>
                   </div>
                 </div>

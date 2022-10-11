@@ -4,6 +4,8 @@ import Categories from '../components/Categories';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Tabs from '../components/Tabs';
+import {ToastContainer} from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css"
 
 
 export default function Home() {
@@ -18,6 +20,8 @@ export default function Home() {
       <Header />
 
       <Categories />
+
+      <ToastContainer />
 
       <main className="bg-lwhite4 py-[15px]">
         <div className="container max-w-[100%]">

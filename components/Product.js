@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { GetProductList } from '../redux/features/productSlice';
+import { addToCart } from "../redux/features/cartSlice";
 import InfiniteScroll from 'react-infinite-scroll-component';
 import FadeLoader from 'react-spinners/FadeLoader'
 
@@ -56,6 +57,13 @@ const Product = () => {
     };
 
 
+    // add to cart
+    const handleAddToCart = (product) => {
+        dispatch(addToCart(product));
+    };
+    
+
+
     return (
         <>
             <InfiniteScroll
@@ -66,7 +74,7 @@ const Product = () => {
                 className="grid grid-cols-1 md:grid-cols-2 xxl:grid-cols-3 3xl:grid-cols-4 gap-8 2md:mt-[20px]"
             >
 
-                {cards.map((card) => (
+                {cards.slice(0, 50).map((card) => (
                     <div key={card.id} className="product-item rounded-[8px] bg-white shadow-shadow5 hover:shadow-shadow7 overflow-hidden cursor-pointer transition ease-in duration-150"
                     onMouseEnter={() => handleMouseEnter(card.id)}
                     onMouseLeave={handleMouseLeave}>
@@ -142,7 +150,8 @@ const Product = () => {
                                     style={{background: '#88C7F3'}}></div>
                                 </div>
 
-                                <button className={`${isHover[card.id] ? 'opacity-1' : 'opacity-0'} transition ease-in duration-150 rounded-[100px] bg-red text-white shadow-shadow1 px-[10px] py-[5px] text-sm font-semibold`}>
+                                <button className={`${isHover[card.id] ? 'opacity-1' : 'opacity-0'} transition ease-in duration-150 rounded-[100px] bg-red text-white shadow-shadow1 px-[10px] py-[5px] text-sm font-semibold`}
+                                onClick={() => handleAddToCart(card)}>
                                     Sepete ekle
                                 </button>
                             </div>

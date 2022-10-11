@@ -6,7 +6,7 @@ const Categories = () => {
 
     return (
         <>
-            <div className="relative cat-wrapper bg-white px-[34px] py-[10px] border-solid border border-lwhite4 flex items-center">
+            <div className="relative cat-wrapper bg-white px-[34px] py-[10px] mt-[90px] border-solid border border-lwhite4 flex items-center">
                 
                 <div className="left-side mr-[20px] sxl:mr-[30px]">
                     <BaseCategories />

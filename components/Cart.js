@@ -49,7 +49,7 @@ const Cart = ({ close }) => {
 
           <div className="cart-items-wrap pl-[26px] pr-[20px] h-[100vh] bg-lwhite7">
               {cart.cartItems.length === 0 ? (
-                  <div className="cart-empty">
+                  <div className="cart-empty pt-[30px]">
                       <p className="font-bold text-center">Səbətdə məhsul yoxdur</p>
                   </div>
               ) : 
@@ -70,7 +70,7 @@ const Cart = ({ close }) => {
                                             className="w-[100%] h-[100%] object-cover"
                                           />
                                       </div>
-                                      <div className="cart-item-info relative w-[100%] pr-[15px]">
+                                      <div className="cart-item-info relative w-[70%] pr-[15px]">
                                           <h6 className="text-sm text-lblack font-semibold tracking-wider mb-[6px]">
                                             {cartItem.title}
                                           </h6>
@@ -106,7 +106,7 @@ const Cart = ({ close }) => {
                                           </div>
 
                                           <button
-                                            className="absolute right-0 top-0"
+                                            className="absolute -right-[15px] top-0"
                                             onClick={() => handleRemoveFromCart(cartItem)}
                                           >
                                             <img src="/images/close.svg" alt="remove-item" />

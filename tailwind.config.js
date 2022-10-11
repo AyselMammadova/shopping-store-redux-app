@@ -56,9 +56,7 @@ module.exports = {
       bord1: '#EDEDED',
       bord2: '#D7D7D7',
       tx: '#666666',
-      tx1: '#696969',
-      
-
+      tx1: '#696969'
     },
     container: {
       padding: {
@@ -142,6 +140,7 @@ module.exports = {
     },
     width: {
       '0': '0',
+      'auto': 'auto',
       '8px': '8px',
       '11px': '11px',
       '16px': '16px',
@@ -151,6 +150,7 @@ module.exports = {
       '67px': '67px',
       '68px': '68px',
       '84px': '84px',
+      '120px': '120px',
       '134px': '134px',
       '188px': '188px',
       '256px': '256px',
@@ -158,6 +158,7 @@ module.exports = {
       '400px': '400px',
       '610px': '610px',
       '60%': '60%',
+      '70%': '70%',
       '100%': '100%',
       'maxContent': 'max-content',
       'calc34': 'calc(100% - 34px)'
@@ -173,6 +174,7 @@ module.exports = {
       '36px': '36px',
       '40px': '40px',
       '50px': '50px',
+      '90px': '90px',
       '101px': '101px',
       '420px': '420px',
       '100%': '100%',
@@ -201,8 +203,10 @@ module.exports = {
       '3px': '3px',
       '9px': '9px',
       '10px': '10px',
+      '15px': '15px',
       '17px': '17px',
       '20px': '20px',
+      '24px': '24px',
       '60px': '60px',
       '90px': '90px',
       '50%': '50%'

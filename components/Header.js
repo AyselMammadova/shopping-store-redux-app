@@ -15,12 +15,12 @@ const Header = () => {
     }
 
     return (
-        <header className="fixed top-0 left-0 w-[100%] z-20 bg-white shadow-shadow3">
-            <div className="px-[34px] py-[20px]">
+        <header className="fixed top-0 left-0 w-[100%] h-[90px] z-20 bg-white shadow-shadow3 flex items-center">
+            <div className="px-[20px] ssm:px-[34px] py-[20px] w-[100%]">
                 <div className="flex items-center">
                     <a href="/" className="mr-auto 3xl:mr-[52px]">
                         <span className="sr-only">Your Company</span>
-                        <img src="/images/logo.svg" alt="logo" />
+                        <img src="/images/logo.svg" alt="logo" className="w-[120px] ssm:w-auto" />
                     </a>
 
                     <a href="#" className="hidden 2md:inline text-sm text-black hover:text-red underline ml-[8px] 3xl:ml-[41px]">
@@ -66,12 +66,12 @@ const Header = () => {
                     </form>
                     
                     <a href="#" className="flex flex-col justify-center items-center text-sm text-black hover:text-red ml-[20px] 2xl:ml-[50px]">
-                        <img src="/images/order.svg" alt="orders" className="mb-[8px]" />
+                        <img src="/images/order.svg" alt="orders" className="ssm:mb-[8px]" />
                         <span className="hidden ssm:inline">Siparişlerim</span>
                     </a>
 
                     <a href="#" className="flex flex-col justify-center items-center text-sm text-black hover:text-red ml-[20px] 2xl:ml-[50px]">
-                        <img src="/images/fav.svg" alt="fav" className="mb-[8px]" />
+                        <img src="/images/fav.svg" alt="fav" className="ssm:mb-[8px]" />
                         <span className="hidden ssm:inline">Favorilerim</span>
                     </a>
                     
@@ -80,7 +80,7 @@ const Header = () => {
                         type="button" onClick={handleOpen}
                         >
                             <div className="relative">
-                                <img src="/images/cart.svg" alt="cart" className="mb-[8px]" />
+                                <img src="/images/cart.svg" alt="cart" className="ssm:mb-[8px]" />
                                 <span className="absolute -top-[2px] -right-[17px] rounded-[50%] bg-red w-[16px] h-[16px] text-xsm text-white flex items-center justify-center">
                                     {cartTotalQuantity}
                                 </span>
@@ -88,20 +88,9 @@ const Header = () => {
                             <span className="hidden ssm:inline">Sepetim</span>
                         </div>
                         
-                        <Transition
-                            className="fixed right-0 top-[90px] z-20 w-[400px] h-[100vh]"
-                            show={open}
-                            enter="transition duration-50 ease-out"
-                            enterFrom="transform scale-95 opacity-0"
-                            enterTo="transform scale-100 opacity-100"
-                            leave="transition duration-25 ease-out"
-                            leaveFrom="transform scale-100 opacity-100"
-                            leaveTo="transform scale-95 opacity-0"
-                            >
-
+                        <div className={`${open ? 'block' : 'hidden'} fixed right-0 top-[90px] z-20 w-[100%] ssm:w-[400px] h-[100vh]`}>
                             <Cart close={handleOpen} />
-
-                        </Transition>
+                        </div>
                     </div>
                 </div>
             </div>

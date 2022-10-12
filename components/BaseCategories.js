@@ -2,6 +2,7 @@ import React, { useState, Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import styles from '../styles/Categories.module.css'
 import { SubsMenu } from './SubsMenu';
+import Image from 'next/image';
 
 const BaseCategories = () => {
 
@@ -55,7 +56,7 @@ const BaseCategories = () => {
                                             flex items-center px-[10px] ssm:px-[20px] py-[18px] text-base font-semibold rounded-[4px]`}
                                         >
                                             <div className="img-wrap min-w-[30px] mr-[10px] ssm:mr-[46px]">
-                                                <img src={`/images/${category.icon}`} alt={category.name} />
+                                                <Image src={`/images/${category.icon}`} alt={category.name} width="24" height="24" />
                                             </div>
 
                                             {category.name}

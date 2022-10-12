@@ -6,11 +6,11 @@ const nextConfig = {
     loader: "akamai",
     path: "",
     domains: [
-      'https://ayselmammadova.github.io/shopping-store-redux-app/',
+      'https://ayselmammadova.github.io/shopping-store-redux-app',
     ],
   },
-  basePath: "/shopping-store-redux-app/",
-  assetPrefix: "/shopping-store-redux-app/"
+  basePath: "/shopping-store-redux-app",
+  assetPrefix: "/shopping-store-redux-app"
 }
 
 module.exports = nextConfig

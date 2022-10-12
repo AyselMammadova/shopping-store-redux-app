@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import Link from 'next/link';
 import {useDispatch, useSelector} from 'react-redux';
 import { GetProductList } from '../redux/features/productSlice';
 import { addToCart } from "../redux/features/cartSlice";
@@ -79,9 +80,9 @@ const Product = () => {
                     onMouseEnter={() => handleMouseEnter(card.id)}
                     onMouseLeave={handleMouseLeave}>
 
-                        <a href={`/details/#${card.id}`} className="h-[420px] relative block">
+                        <Link href={`/details/${card.id}`}>
 
-                            <div className="img-wrap h-[100%]">
+                            <div className="img-wrap h-[420px] relative block cursor-pointer">
 
                                 <img src={card.images[0]} alt={card.title} className="w-[100%] h-[100%] object-cover" />
 
@@ -116,7 +117,7 @@ const Product = () => {
                                     <span className="text-sm font-semibold text-grey5">XXL</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
                         <div className="info-wrap py-[13px] px-[25px]">
                             <h6 className="text-base font-semibold">

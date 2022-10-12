@@ -109,6 +109,7 @@ const Tabs = () => {
             <div className="mt-[10px] md-mt-0">
               <Select 
                 value={selectedOption}
+                instanceId={1}
                 onChange={handleChange}
                 styles={customStyles}
                 options={orders} 

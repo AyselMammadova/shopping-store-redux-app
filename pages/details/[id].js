@@ -1,13 +1,13 @@
 import React from 'react'
-import Breadcrumb from '../components/Breadcrumb';
-import Categories from '../components/Categories';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import ProductDetails from '../components/ProductDetails';
-import Up from '../components/Up';
+import Breadcrumb from '../../components/Breadcrumb';
+import Categories from '../../components/Categories';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import ProductDetails from '../../components/ProductDetails';
+import Up from '../../components/Up';
 
 
-const shop = () => {
+const Details = () => {
   return (
     <>
         <Header />
@@ -30,4 +30,4 @@ const shop = () => {
   )
 }
 
-export default shop;
+export default Details;

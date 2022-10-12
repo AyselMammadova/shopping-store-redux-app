@@ -1,8 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
+import Cookie from "js-cookie";
+
 
 const initialState = {
-  cartItems: [],
+  cartItems: Cookie.get("cartItems")
+    ? JSON.parse(Cookie.get("cartItems"))
+    : [],
   cartTotalQuantity: 0,
   cartTotalAmount: 0,
 };
@@ -31,7 +35,7 @@ const cartSlice = createSlice({
           position: "bottom-left",
         });
       }
-      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+      Cookie.set("cartItems", JSON.stringify(state.cartItems));
     },
 
     decreaseCart(state, action) {
@@ -57,7 +61,7 @@ const cartSlice = createSlice({
         });
       }
 
-      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+      Cookie.set("cartItems", JSON.stringify(state.cartItems));
     },
 
     removeFromCart(state, action) {
@@ -73,7 +77,7 @@ const cartSlice = createSlice({
             position: "bottom-left",
           });
         }
-        localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+        Cookie.set("cartItems", JSON.stringify(state.cartItems));
         return state;
       });
     },
@@ -101,7 +105,7 @@ const cartSlice = createSlice({
 
     clearCart(state, action) {
       state.cartItems = [];
-      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+      Cookie.set("cartItems", JSON.stringify(state.cartItems));
       toast.error("Səbətdə məhsul yoxdur", { position: "bottom-left" });
     },
   },

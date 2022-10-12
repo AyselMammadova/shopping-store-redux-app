@@ -1,7 +1,7 @@
-import { Transition } from '@headlessui/react';
 import React, { useState } from 'react';
 import { useSelector } from "react-redux";
-import Cart from './Cart';
+import dynamic from 'next/dynamic';
+const  Cart = dynamic(() => import('./Cart'), { ssr: false })
 
 
 const Header = () => {

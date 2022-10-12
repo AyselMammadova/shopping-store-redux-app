@@ -11,6 +11,7 @@ module.exports = {
       body: ['Source Sans Pro', 'sans-serif']
     },
     fontSize: {
+      xssm: ['11px', '14px'],
       xsm: ['12px', '15px'],
       xxsm: ['13px', '16px'],
       sm: ['14px', '18px'],
@@ -58,7 +59,9 @@ module.exports = {
       bord1: '#EDEDED',
       bord2: '#D7D7D7',
       tx: '#666666',
-      tx1: '#696969'
+      tx1: '#696969',
+      green: '#0BC15C',
+      blue: '#85A1F2'
     },
     container: {
       padding: {
@@ -78,6 +81,7 @@ module.exports = {
       'xl': '1280px',
       'xxl': '1400px',
       '2xl': '1536px',
+      '2xll': '1550px',
       '3xl': '1720px',
     },
     margin: {
@@ -157,6 +161,8 @@ module.exports = {
       '32px': '32px',
       '36px': '36px',
       '40px': '40px',
+      '52px': '52px',
+      '56px': '56px',
       '67px': '67px',
       '68px': '68px',
       '84px': '84px',
@@ -172,7 +178,8 @@ module.exports = {
       '70%': '70%',
       '100%': '100%',
       'maxContent': 'max-content',
-      'calc34': 'calc(100% - 34px)'
+      'calc34': 'calc(100% - 34px)',
+      'calc104': 'calc(100% - 104px)'
     },
     height: {
       '0': '0',
@@ -185,15 +192,18 @@ module.exports = {
       '36px': '36px',
       '40px': '40px',
       '50px': '50px',
+      '85px': '85px',
       '90px': '90px',
       '101px': '101px',
       '155px': '155px',
       '180px': '180px',
       '420px': '420px',
+      '600px': '600px',
       '670px': '670px',
       '100%': '100%',
       '100vh': '100vh',
-      'hcalc': 'calc(100vh - 310px)'
+      'hcalc': 'calc(100vh - 310px)',
+      'hcalc34': 'calc(100% - 34px)'
     },
     minWidth: {
       '30px': '30px',
@@ -236,7 +246,9 @@ module.exports = {
       'shadow5': '0px 2px 10px rgba(0, 0, 0, 0.05)',
       'shadow6': '-2px 0px 3px rgba(0, 0, 0, 0.1)',
       'shadow7': '0px 15px 40px rgba(0, 0, 0, 0.15)',
-      'shadow8': '0px 0px 10px rgba(0, 0, 0, 0.1)'
+      'shadow8': '0px 0px 10px rgba(0, 0, 0, 0.1)',
+      'shadow9': '0px 4px 4px rgba(11, 193, 92, 0.2)',
+      'shadow10': '0px 4px 4px rgba(217, 7, 9, 0.1)'
     }
   },
   plugins: [

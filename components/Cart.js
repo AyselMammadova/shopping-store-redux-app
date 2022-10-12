@@ -10,6 +10,7 @@ import { useEffect } from "react";
 
 const Cart = ({ close }) => {
   const cart = useSelector((state) => state.cart);
+
   const dispatch = useDispatch();
 
   useEffect(() => {

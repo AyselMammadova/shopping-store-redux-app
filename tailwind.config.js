@@ -156,6 +156,7 @@ module.exports = {
     width: {
       '0': '0',
       'auto': 'auto',
+      '6px': '6px',
       '8px': '8px',
       '11px': '11px',
       '16px': '16px',
@@ -235,8 +236,10 @@ module.exports = {
       '1px': '1px',
       '2px': '2px',
       '3px': '3px',
+      '7px': '7px',
       '9px': '9px',
       '10px': '10px',
+      '13px': '13px',
       '15px': '15px',
       '17px': '17px',
       '20px': '20px',

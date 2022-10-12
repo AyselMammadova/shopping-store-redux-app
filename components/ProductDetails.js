@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import Select from 'react-select';
 import { addToCart, decreaseCart, getTotals } from "../redux/features/cartSlice";
@@ -11,7 +11,6 @@ const ProductDetails = () => {
 
     const router = useRouter();
     const { id } = router.query;
-    console.log(id)
 
     const [selectedItem, setSelectedItem] = useState();
 
@@ -124,8 +123,46 @@ const ProductDetails = () => {
     }
 
 
+    // open modal
+    const [open, setOpen] = useState(false);
+
+    const toggleModal = () => {
+        setOpen(!open);
+    }
+
+    useEffect(() => {
+
+        if(open) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'visible';
+        }
+
+    }, [open]);
+
+
+    // when click outside then close modal
+
+    const modalRef = useRef(null);
+
+    useEffect(() => {
+        document.addEventListener("click", handleClickOutside, true)
+    }, [modalRef]);
+
+    const handleClickOutside = (e) => {
+
+        if(modalRef.current !== null) {
+            if(!modalRef.current.contains(e.target)) {
+                setOpen(false)
+            } 
+        }
+
+    }
+
+
     return (
         <>
+            
             {selectedItem && 
                 <div key={selectedItem.id} className="detail-wrapper bg-white rounded-[4px] py-[35px] px-[40px] shadow-shadow3">
                     <div className="detail-wrap grid grid-cols-5 h-[100%] gap-8">
@@ -156,23 +193,24 @@ const ProductDetails = () => {
                         </div>
 
                         <div className="product-info-wrap col-span-5 xl:col-span-3 grid">
-                            <div className="product-info ssm:w-[45%]">
+                            <div className="product-info sm:w-[45%] text-center xl:text-left mx-auto xl:mx-0">
                                 <h3 className="text-lgg">
-                                    <span className="mr-[2px] font-semibold underline hover:underline-none cursor-pointer">
+                                    <span className="mr-[4px] font-semibold transition ease-in delay-150 underline hover:no-underline cursor-pointer"
+                                    onClick={toggleModal} ref={modalRef}>
                                         Koton
                                     </span>
                                     {selectedItem.title}
                                 </h3>
 
                                 <p className="my-[10px] text-xsm font-semibold">
-                                    <span className="text-grey5 mr-[2px]">
+                                    <span className="text-grey5 mr-[4px]">
                                         Satıcı:
                                     </span>
                                     Koton
                                     <img src="/images/rating.svg" alt="rating-seller" className="ml-[6px] inline relative -top-[1px]" />
                                 </p>
 
-                                <div className="stars flex items-center">
+                                <div className="stars flex items-center justify-center xl:justify-start">
                                     <span className="mr-[10px] text-sm font-semibold">4.5</span>
                                     <img src="/images/star.svg" alt="star" className="mr-[6px] w-[16px]" />
                                     <img src="/images/star.svg" alt="star" className="mr-[6px] w-[16px]" />
@@ -181,7 +219,7 @@ const ProductDetails = () => {
                                     <img src="/images/star-gray.svg" alt="star-gray" className="mr-[6px]" />
                                 </div>
 
-                                <div className="product-price flex items-center mt-[12px]">
+                                <div className="product-price flex items-center justify-center xl:justify-start mt-[12px]">
                                     <div className="old-price text-lg text-grey5 line-through mr-[9px]">
                                         1000,99TL
                                     </div>
@@ -260,7 +298,7 @@ const ProductDetails = () => {
                                         </div>
 
                                         <p className="mt-[16px] text-xsm font-semibold">
-                                            <span className="text-grey5 mr-[2px]">
+                                            <span className="text-grey5 mr-[4px]">
                                                 Tahmini Teslimat: 
                                             </span>
                                             12 - 26 Haziran
@@ -338,7 +376,7 @@ const ProductDetails = () => {
                                         </div>
 
                                         <p className="mt-[16px] text-xsm font-semibold text-center">
-                                            <span className="text-grey5 mr-[2px]">
+                                            <span className="text-grey5 mr-[4px]">
                                                 Favori: 
                                             </span>
                                             1565
@@ -349,7 +387,8 @@ const ProductDetails = () => {
 
                             <div className="grid grid-cols-7 gap-4 mt-[46px]">
                                 <div className="col-span-7 md:col-span-5 grid ssm:grid-cols-2 gap-4">
-                                    <button className="rounded-[100px] shadow-shadow9 bg-green text-white w-[100%] h-[50px] flex items-center justify-center font-semibold text-base">
+                                    <button className="rounded-[100px] shadow-shadow9 bg-green text-white w-[100%] h-[50px] flex items-center justify-center font-semibold text-base"
+                                    onClick={toggleModal} ref={modalRef}>
                                         HEMEN AL
                                     </button>
                                     
@@ -363,19 +402,24 @@ const ProductDetails = () => {
                     </div>
                 </div>
             }
+            
 
-            <DetailModal 
-            selectedItem={selectedItem} 
-            cartItemm={cartItemm} 
-            sizes={sizes} 
-            handleAddToCart={handleAddToCart}
-            handleDecreaseCart={handleDecreaseCart}
-            selectedOption={selectedOption}
-            handleChange={handleChange} 
-            bell={bell}
-            handleBell={handleBell}
-            fav={fav}
-            handleFav={handleBell} />
+            {open && 
+                <DetailModal 
+                selectedItem={selectedItem} 
+                cartItemm={cartItemm} 
+                sizes={sizes} 
+                handleAddToCart={handleAddToCart}
+                handleDecreaseCart={handleDecreaseCart}
+                selectedOption={selectedOption}
+                handleChange={handleChange} 
+                bell={bell}
+                handleBell={handleBell}
+                fav={fav}
+                handleFav={handleFav}
+                toggleModal={toggleModal}
+                modalRef={modalRef} />
+            }
         </>
     )
 }

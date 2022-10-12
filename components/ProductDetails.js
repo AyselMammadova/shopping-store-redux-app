@@ -5,6 +5,7 @@ import { addToCart, decreaseCart, getTotals } from "../redux/features/cartSlice"
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from 'next/router';
 import DetailModal from './DetailModal';
+import Link from 'next/link';
 
 
 const ProductDetails = () => {
@@ -14,19 +15,18 @@ const ProductDetails = () => {
 
     const [selectedItem, setSelectedItem] = useState();
 
-    const getSelected = async() => {
-
-        if(id !== undefined) {
-            const response = await axios
-            .get(`https://api.escuelajs.co/api/v1/products/${id}`)
-            .catch((err) => {
-                console.log("Err",err)
-            });
-            setSelectedItem(response.data)
-        }  
-    };
-
     useEffect(() => {
+        const getSelected = async() => {
+            if(id !== undefined) {
+                const response = await axios
+                .get(`https://api.escuelajs.co/api/v1/products/${id}`)
+                .catch((err) => {
+                    console.log("Err",err)
+                });
+                setSelectedItem(response.data)
+            }  
+        };
+
         getSelected();
     }, [id]);
 
@@ -278,9 +278,11 @@ const ProductDetails = () => {
                                                     Beden
                                                 </h6>
 
-                                                <a href="#" className="text-xsm text-grey8 underline">
-                                                    Beden Tablosu
-                                                </a>
+                                                <Link href="#">
+                                                    <a className="text-xsm text-grey8 underline">
+                                                        Beden Tablosu
+                                                    </a>
+                                                </Link>
                                             </div>
                                             <div className="sizes-body mt-[18px]">
                                                 <Select 

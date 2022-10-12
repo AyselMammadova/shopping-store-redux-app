@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -13,27 +14,35 @@ const Footer = () => {
 
                             <ul>
                                 <li className="mt-[20px]">
-                                    <a href="#" className="text-sm hover:underline">
-                                        Hakkımızda 
-                                    </a>
+                                    <Link href="#">
+                                        <a className="text-sm hover:underline">
+                                            Hakkımızda 
+                                        </a>
+                                    </Link>
                                 </li> 
 
                                 <li className="mt-[20px]">
-                                    <a href="#" className="text-sm hover:underline">
-                                        Kariyer
-                                    </a>
+                                    <Link href="#">
+                                        <a className="text-sm hover:underline">
+                                            Kariyer
+                                        </a>
+                                    </Link>
                                 </li>
 
                                 <li className="mt-[20px]">
-                                    <a href="#" className="text-sm hover:underline">
-                                        İletişim 
-                                    </a>
+                                    <Link href="#">
+                                        <a className="text-sm hover:underline">
+                                            İletişim 
+                                        </a>
+                                    </Link>
                                 </li>
 
                                 <li className="mt-[20px]">
-                                    <a href="#" className="text-sm hover:underline">
-                                        Bizde Satış Yap 
-                                    </a>
+                                    <Link href="#">
+                                        <a className="text-sm hover:underline">
+                                            Bizde Satış Yap 
+                                        </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -45,27 +54,35 @@ const Footer = () => {
                             
                             <ul>
                                 <li className="mt-[20px]">
-                                    <a href="#" className="text-sm hover:underline">
-                                        Sıkça Sorulan Sorular 
-                                    </a>
+                                    <Link href="#">
+                                        <a className="text-sm hover:underline">
+                                            Sıkça Sorulan Sorular 
+                                        </a>
+                                    </Link>
                                 </li> 
 
                                 <li className="mt-[20px]">
-                                    <a href="#" className="text-sm hover:underline">
-                                        Canlı Yardım 
-                                    </a>
+                                    <Link href="#">
+                                        <a className="text-sm hover:underline">
+                                            Canlı Yardım 
+                                        </a>
+                                    </Link>
                                 </li>
 
                                 <li className="mt-[20px]">
-                                    <a href="#" className="text-sm hover:underline">
-                                        Naslk İade Ederim  
-                                    </a>
+                                    <Link href="#">
+                                        <a className="text-sm hover:underline">
+                                            Naslk İade Ederim  
+                                        </a>
+                                    </Link>
                                 </li>
 
                                 <li className="mt-[20px]">
-                                    <a href="#" className="text-sm hover:underline">
-                                        Nasıl Sipariş Verilir 
-                                    </a>
+                                    <Link href="#">
+                                        <a className="text-sm hover:underline">
+                                            Nasıl Sipariş Verilir 
+                                        </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -77,27 +94,35 @@ const Footer = () => {
                             
                             <ul>
                                 <li className="mt-[20px]">
-                                    <a href="#" className="text-sm hover:underline">
-                                        Özel kampanyalar 
-                                    </a>
+                                    <Link href="#">
+                                        <a className="text-sm hover:underline">
+                                            Özel kampanyalar 
+                                        </a>
+                                    </Link>
                                 </li> 
 
                                 <li className="mt-[20px]">
-                                    <a href="#" className="text-sm hover:underline">
-                                        Bayram kampanyaları
-                                    </a>
+                                    <Link href="#">
+                                        <a className="text-sm hover:underline">
+                                            Bayram kampanyaları
+                                        </a>
+                                    </Link>
                                 </li>
 
                                 <li className="mt-[20px]">
-                                    <a href="#" className="text-sm hover:underline">
-                                        Aktif Kampanyalar 
-                                    </a>
+                                    <Link href="#">
+                                        <a className="text-sm hover:underline">
+                                            Aktif Kampanyalar 
+                                        </a>
+                                    </Link>
                                 </li>
 
                                 <li className="mt-[20px]">
-                                    <a href="#" className="text-sm hover:underline">
-                                        VIP Üyelik
-                                    </a>
+                                    <Link href="#">
+                                        <a className="text-sm hover:underline">
+                                            VIP Üyelik
+                                        </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -109,31 +134,39 @@ const Footer = () => {
                             
                             <ul>
                                 <li className="mt-[20px]">
-                                    <a href="https://www.facebook.com/" className="text-sm hover:underline flex items-center" target="_blank">
-                                        <img src="/images/facebook.svg" alt="facebook" className="mr-[15px]" />
-                                        Facebook 
-                                    </a>
+                                    <Link href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+                                        <a className="text-sm hover:underline flex items-center">
+                                            <img src="/images/facebook.svg" alt="facebook" className="mr-[15px]" />
+                                            Facebook
+                                        </a>
+                                    </Link>
                                 </li> 
 
                                 <li className="mt-[20px]">
-                                    <a href="https://www.instagram.com/" className="text-sm hover:underline flex items-center" target="_blank">
-                                        <img src="/images/instagram.svg" alt="instagram" className="mr-[15px]" />
-                                        Instagram
-                                    </a>
+                                    <Link href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+                                        <a className="text-sm hover:underline flex items-center">
+                                            <img src="/images/instagram.svg" alt="instagram" className="mr-[15px]" />
+                                            Instagram
+                                        </a>
+                                    </Link>
                                 </li>
 
                                 <li className="mt-[20px]">
-                                    <a href="https://twitter.com/" className="text-sm hover:underline flex items-center" target="_blank">
-                                        <img src="/images/twitter.svg" alt="twitter" className="mr-[15px]" />
-                                        Twitter 
-                                    </a>
+                                    <Link href="https://twitter.com/" target="_blank" rel="noreferrer">
+                                        <a className="text-sm hover:underline flex items-center">
+                                            <img src="/images/twitter.svg" alt="twitter" className="mr-[15px]" />
+                                            Twitter
+                                        </a>
+                                    </Link>
                                 </li>
 
                                 <li className="mt-[20px]">
-                                    <a href="http://www.youtube.com/" className="text-sm hover:underline flex items-center" target="_blank">
-                                        <img src="/images/youtube.svg" alt="youtube" className="mr-[15px]" />
-                                        Youtube
-                                    </a>
+                                    <Link href="http://www.youtube.com/" target="_blank" rel="noreferrer">
+                                        <a className="text-sm hover:underline flex items-center">
+                                            <img src="/images/youtube.svg" alt="youtube" className="mr-[15px]" />
+                                            Youtube
+                                        </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -161,7 +194,11 @@ const Footer = () => {
 
                             <div className="note text-sm mt-[20px] w-[60%]">
                                 Bültene kaydolarak Gizlilik Politikası
-                                <a href="#" className="underline mr-[4px] inline-block">Gizlilik Politikasını</a> 
+                                <Link href="#">
+                                    <a className="underline mr-[4px] inline-block">
+                                        Gizlilik Politikasını
+                                    </a>
+                                </Link> 
                                 kabul etmiş olursunuz
                             </div>
                         </div>
@@ -176,13 +213,17 @@ const Footer = () => {
                             © Telif Hakkı 2022 -  testwebsite.com 
                         </p>
 
-                        <a href="#" className="text-xsm">
-                            Kullanım Koşulları
-                        </a>
+                        <Link href="#">
+                            <a className="text-xsm">
+                                Kullanım Koşulları
+                            </a>
+                        </Link>
 
-                        <a href="#" className="text-xsm">
-                            KVK ve Gizlilik Politikası
-                        </a>
+                        <Link href="#">
+                            <a className="text-xsm">
+                                KVK ve Gizlilik Politikası
+                            </a>
+                        </Link>
 
                         <div className="foot-list xl:col-span-3">
                             <div className="flex items-center lg:justify-end">

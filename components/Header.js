@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { useSelector } from "react-redux";
 import dynamic from 'next/dynamic';
 const  Cart = dynamic(() => import('./Cart'), { ssr: false })
@@ -18,18 +19,24 @@ const Header = () => {
         <header className="fixed top-0 left-0 w-[100%] h-[90px] z-20 bg-white shadow-shadow3 flex items-center">
             <div className="px-[20px] ssm:px-[34px] py-[20px] w-[100%]">
                 <div className="flex items-center">
-                    <a href="/" className="mr-auto 3xl:mr-[52px]">
-                        <span className="sr-only">Your Company</span>
-                        <img src="/images/logo.svg" alt="logo" className="w-[120px] ssm:w-auto" />
-                    </a>
+                    <Link href="/">
+                        <a className="mr-auto 3xl:mr-[52px]">
+                            <span className="sr-only">Your Company</span>
+                            <img src="/images/logo.svg" alt="logo" className="w-[120px] ssm:w-auto" />
+                        </a>
+                    </Link>
 
-                    <a href="#" className="hidden 2md:inline text-sm text-black hover:text-red underline ml-[8px] 3xl:ml-[41px]">
-                        Mağazanı yarat
-                    </a>
+                    <Link href="#">
+                        <a className="hidden 2md:inline text-sm text-black hover:text-red underline ml-[8px] 3xl:ml-[41px]">
+                            Mağazanı yarat
+                        </a>
+                    </Link>
 
-                    <a href="#" className="hidden xl:inline text-sm text-black hover:text-red ml-[41px]">
-                        Yardım 
-                    </a>
+                    <Link href="#">
+                        <a className="hidden xl:inline text-sm text-black hover:text-red ml-[41px]">
+                            Yardım 
+                        </a>
+                    </Link>
 
                     <div className="hidden xl:flex drop-lang items-center mx-[20px] 2xl:mx-[76px] cursor-pointer">
                         <div className="flex items-center">
@@ -65,15 +72,19 @@ const Header = () => {
                         </button>
                     </form>
                     
-                    <a href="#" className="flex flex-col justify-center items-center text-sm text-black hover:text-red ml-[20px] 2xl:ml-[50px]">
-                        <img src="/images/order.svg" alt="orders" className="ssm:mb-[8px]" />
-                        <span className="hidden ssm:inline">Siparişlerim</span>
-                    </a>
+                    <Link href="#">
+                        <a className="flex flex-col justify-center items-center text-sm text-black hover:text-red ml-[20px] 2xl:ml-[50px]">
+                            <img src="/images/order.svg" alt="orders" className="ssm:mb-[8px]" />
+                            <span className="hidden ssm:inline">Siparişlerim</span>
+                        </a>
+                    </Link>
 
-                    <a href="#" className="flex flex-col justify-center items-center text-sm text-black hover:text-red ml-[20px] 2xl:ml-[50px]">
-                        <img src="/images/fav.svg" alt="fav" className="ssm:mb-[8px]" />
-                        <span className="hidden ssm:inline">Favorilerim</span>
-                    </a>
+                    <Link href="#">
+                        <a className="flex flex-col justify-center items-center text-sm text-black hover:text-red ml-[20px] 2xl:ml-[50px]">
+                            <img src="/images/fav.svg" alt="fav" className="ssm:mb-[8px]" />
+                            <span className="hidden ssm:inline">Favorilerim</span>
+                        </a>
+                    </Link>
                     
                     <div className="cart-drop">
                         <div className="flex flex-col justify-center items-center text-sm text-black hover:text-red ml-[20px] 2xl:ml-[50px] cursor-pointer"

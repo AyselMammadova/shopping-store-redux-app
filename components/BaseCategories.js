@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Fragment } from 'react';
+import React, { useState, Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import styles from '../styles/Categories.module.css'
 import { SubsMenu } from './SubsMenu';
@@ -33,7 +32,7 @@ const BaseCategories = () => {
                     </Menu.Button>
 
                     <Transition
-                        className="absolute z-10 w-calc34"
+                        className="absolute z-20 w-calc34"
                         show={open}
                         enter="transition duration-50 ease-out"
                         enterFrom="transform scale-95 opacity-0"

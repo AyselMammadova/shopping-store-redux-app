@@ -1,7 +1,6 @@
 import React from 'react'
 import Breadcrumb from '../../components/Breadcrumb';
 import Categories from '../../components/Categories';
-import DetailModal from '../../components/DetailModal';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import ProductDetails from '../../components/ProductDetails';

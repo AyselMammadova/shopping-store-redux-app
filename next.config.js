@@ -4,10 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     loader: "akamai",
-    path: "",
-    domains: [
-      'https://ayselmammadova.github.io/shopping-store-redux-app',
-    ],
+    path: ""
   },
   basePath: "/shopping-store-redux-app",
   assetPrefix: "/shopping-store-redux-app"

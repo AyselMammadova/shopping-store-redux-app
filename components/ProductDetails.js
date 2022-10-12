@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Select from 'react-select';
 import { addToCart, decreaseCart, getTotals } from "../redux/features/cartSlice";
-import { GetAllProductList } from '../redux/features/selectedSlice';
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from 'next/router';
 
@@ -10,14 +10,31 @@ const ProductDetails = () => {
 
     const router = useRouter();
     const { id } = router.query;
+    console.log(id)
+
+    const [selectedItem, setSelectedItem] = useState();
+
+    const getSelected = async() => {
+
+        if(id !== undefined) {
+            const response = await axios
+            .get(`https://api.escuelajs.co/api/v1/products/${id}`)
+            .catch((err) => {
+                console.log("Err",err)
+            });
+            setSelectedItem(response.data)
+        }  
+    };
+
+    useEffect(() => {
+        getSelected();
+    }, [id]);
+
 
     const dispatch = useDispatch();
 
-    const selected = useSelector(state => state.selected.allProducts);
     const cart = useSelector(state => state.cart);
-    const cartIndex = parseInt(id) + 1;
-
-    const selectedItem = selected[id];
+    const cartIndex = parseInt(id);
 
     let cartItemm = [];
 
@@ -26,10 +43,6 @@ const ProductDetails = () => {
             cartItemm = cartItem
         }    
     })
-
-    useEffect(() => {
-        dispatch(GetAllProductList());
-    }, [dispatch]);
 
     useEffect(() => {
         dispatch(getTotals());
@@ -256,6 +269,7 @@ const ProductDetails = () => {
                                                     <button
                                                         className="text-xl text-grey8 w-[52px] flex items-center justify-center"
                                                         style={{lineHeight: "30px"}}
+                                                        disabled={`${cartItemm.cartQuantity == null ? 'disabled' : ''}`}
                                                         onClick={() => handleDecreaseCart(selectedItem)}
                                                     >
                                                         -

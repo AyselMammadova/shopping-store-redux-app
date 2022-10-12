@@ -25,7 +25,7 @@ const Up = () => {
         <>
             {scroll ? (
                 <div className="flex flex-col items-center">
-                    <button className="border border-solid border-red text-white rounded-[50%] w-[40px] h-[40px] flex items-center justify-center"
+                    <button className="border border-solid border-red bg-white text-white rounded-[50%] w-[40px] h-[40px] flex items-center justify-center"
                     style={{filter: 'drop-shadow(0px 4px 4px rgba(217, 7, 9, 0.23))'}}
                     onClick={scrollUp}>
                         <img src="/images/red-down-shadow.svg" alt="down" className="relative top-[3px]" />

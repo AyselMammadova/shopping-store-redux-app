@@ -4,6 +4,7 @@ import Select from 'react-select';
 import { addToCart, decreaseCart, getTotals } from "../redux/features/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from 'next/router';
+import DetailModal from './DetailModal';
 
 
 const ProductDetails = () => {
@@ -110,15 +111,24 @@ const ProductDetails = () => {
     // notification
     const [bell, setBell] = useState(false);
 
+    const handleBell = () => {
+        setBell(!bell)
+    }
+
+
     // add fav
     const [fav, setFav] = useState(false);
+
+    const handleFav = () => {
+        setFav(!fav)
+    }
 
 
     return (
         <>
             {selectedItem && 
                 <div key={selectedItem.id} className="detail-wrapper bg-white rounded-[4px] py-[35px] px-[40px] shadow-shadow3">
-                    <div className="detail-wrap grid grid-cols-5 h-[100%] gap-4">
+                    <div className="detail-wrap grid grid-cols-5 h-[100%] gap-8">
                         <div className="imgs-slider flex col-span-5 xl:col-span-2 mb-[30px]  xl:mb-0 justify-center xl:justify-start">
                             <div className="slider-navs w-[120px]">
                                 <div className="upslide shadow-shadow8 cursor-pointer h-[30px] flex items-center justify-center">
@@ -298,7 +308,7 @@ const ProductDetails = () => {
                                 <div className="col-span-7 md:col-span-2 grid grid-cols-2 gap-4">
                                     <div>
                                         <div className="border border-solid border-grey8 rounded-[6px] h-[50px] flex flex-col items-center justify-center text-center cursor-pointer"
-                                        onClick={() => setBell(!bell)}>
+                                        onClick={handleBell}>
                                             <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M21.9327 11.1323C21.6567 11.1323 21.4327 10.9083 21.4327 10.6323C21.4327 7.69435 20.2887 4.93135 18.2107 2.85435C18.0157 2.65935 18.0157 2.34235 18.2107 2.14735C18.4057 1.95235 18.7227 1.95235 18.9177 2.14735C21.1847 4.41335 22.4327 7.42635 22.4327 10.6323C22.4327 10.9083 22.2087 11.1323 21.9327 11.1323Z" 
                                                 fill={`${bell ? '#85A1F2' : '#A6A6A6'}`} stroke={`${bell ? '#85A1F2' : '#A6A6A6'}`} strokeWidth="0.3"/>
@@ -320,7 +330,7 @@ const ProductDetails = () => {
 
                                     <div>
                                         <div className="border border-solid border-grey8 rounded-[6px] h-[50px] flex flex-col items-center justify-center text-center cursor-pointer"
-                                        onClick={() => setFav(!fav)}>
+                                        onClick={handleFav}>
                                             <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M12.0809 22.6323L11.7951 22.484C11.677 22.4222 8.85023 20.9576 5.97992 18.4239C4.28383 16.9222 2.92944 15.3649 1.95403 13.7829C0.711476 11.7683 0.0839844 9.71659 0.0839844 7.68963C0.0839844 5.92221 0.792242 4.13626 2.02859 2.80143C3.32085 1.4048 5.01073 0.632324 6.78758 0.632324C8.87508 0.632324 10.8259 1.60255 12.0871 3.21547C13.3421 1.60255 15.2929 0.632324 17.3804 0.632324C19.1572 0.632324 20.8471 1.4048 22.1394 2.80143C23.3757 4.14244 24.084 5.92221 24.084 7.68963C24.084 9.71659 23.4565 11.7683 22.2139 13.7767C21.2385 15.3587 19.8841 16.9222 18.188 18.4177C15.3177 20.9514 12.4909 22.4222 12.3729 22.4778L12.0809 22.6323ZM6.78758 1.86828C3.88 1.86828 1.32654 4.58738 1.32654 7.68963C1.32654 11.793 4.30868 15.2908 6.80622 17.4969C9.04904 19.4745 11.3043 20.7969 12.0809 21.2295C12.8637 20.7969 15.1376 19.4621 17.3804 17.4784C19.8717 15.2722 22.8414 11.7868 22.8414 7.68963C22.8414 4.58738 20.288 1.86828 17.3804 1.86828C15.4109 1.86828 13.5906 2.9312 12.6276 4.63682L12.0871 5.59468L11.5466 4.63682C10.5774 2.9312 8.75704 1.86828 6.78758 1.86828Z" 
                                                 fill={`${fav ? 'red' : '#A6A6A6'}`} />
@@ -353,6 +363,19 @@ const ProductDetails = () => {
                     </div>
                 </div>
             }
+
+            <DetailModal 
+            selectedItem={selectedItem} 
+            cartItemm={cartItemm} 
+            sizes={sizes} 
+            handleAddToCart={handleAddToCart}
+            handleDecreaseCart={handleDecreaseCart}
+            selectedOption={selectedOption}
+            handleChange={handleChange} 
+            bell={bell}
+            handleBell={handleBell}
+            fav={fav}
+            handleFav={handleBell} />
         </>
     )
 }

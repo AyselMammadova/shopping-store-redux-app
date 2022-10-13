@@ -62,7 +62,7 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                                             <ul style={{height: 'calc(100% - 60px)'}}>
                                                 {selectedItem.images.map((image, i) => (
                                                     <li style={{height: '33.33%'}} key={i}>
-                                                        <Image src={image} alt={selectedItem.title} width="100%" height="100%" objectFit="cover" />
+                                                        <img src={image} alt={selectedItem.title} className="w-[100%] h-[100%] object-cover" />
                                                     </li>
                                                 ))}
                                             </ul>
@@ -72,7 +72,7 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                                         </div>
 
                                         <div className="selected-img w-[400px] h-[100%] relative rounded-[4px] overflow-hidden ml-[30px]">
-                                            <Image src={selectedItem.images[0]} alt={selectedItem.title} width="100%" height="100%" objectFit="cover" />
+                                            <img src={selectedItem.images[0]} alt={selectedItem.title} className="w-[100%] h-[100%] object-cover" />
 
                                             <div className="sale absolute left-[10px] top-[10px]">
                                                 <Image src="/images/sale.svg" alt="sale" width="72.81px" height="69.74px" />
@@ -95,22 +95,28 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                                                         Satıcı:
                                                     </span>
                                                     Koton
-                                                    <Image src="/images/rating.svg" alt="rating-seller" width="24px" height="16px"
-                                                    className="ml-[6px] inline relative -top-[1px]" />
+                                                    <span className="ml-[6px] relative top-[4px]">
+                                                        <Image src="/images/rating.svg" alt="rating-seller" width="24px" height="16px" />
+                                                    </span>
                                                 </p>
 
                                                 <div className="stars flex items-center">
                                                     <span className="mr-[10px] text-sm font-semibold">4.5</span>
-                                                    <Image src="/images/star.svg" alt="star" width="16px" height="16px"
-                                                    className="mr-[6px]" />
-                                                    <Image src="/images/star.svg" alt="star" width="16px" height="16px"
-                                                    className="mr-[6px]" />
-                                                    <Image src="/images/star.svg" alt="star" width="16px" height="16px"
-                                                    className="mr-[6px]" />
-                                                    <Image src="/images/star.svg" alt="star" width="16px" height="16px"
-                                                    className="mr-[6px]" />
-                                                    <Image src="/images/star-gray.svg" alt="star-gray" width="16px" height="16px"
-                                                    className="mr-[6px]" />
+                                                    <div className="mr-[6px]">
+                                                        <Image src="/images/star.svg" alt="star" width="16px" height="16px" />
+                                                    </div>
+                                                    <div className="mr-[6px]">
+                                                        <Image src="/images/star.svg" alt="star" width="16px" height="16px" />
+                                                    </div>
+                                                    <div className="mr-[6px]">
+                                                        <Image src="/images/star.svg" alt="star" width="16px" height="16px" />
+                                                    </div>
+                                                    <div className="mr-[6px]">
+                                                        <Image src="/images/star.svg" alt="star" width="16px" height="16px" />
+                                                    </div>
+                                                    <div className="mr-[6px]">
+                                                        <Image src="/images/star-gray.svg" alt="star-gray" width="16px" height="16px" />
+                                                    </div>
                                                 </div>
 
                                                 <div className="product-price flex items-center mt-[12px]">
@@ -129,7 +135,7 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                                             </div>
 
                                             <div className="border border-solid border-grey7 rounded-[4px] h-144px] py-[14px] px-[24px] flex flex-col items-center justify-center text-center col-span-3 sm:col-span-1">
-                                                <Image src="/images/car.svg" alt="car" width="38.76px" height="32.96px" />
+                                                <Image src="/images/car.svg" alt="car" width="51px" height="51px" />
 
                                                 <span className="gradient mt-[15px] text-sm font-semibold">
                                                     KARGO BEDAVA
@@ -137,7 +143,7 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                                             </div>
 
                                             <div className="border border-solid border-grey7 rounded-[4px] h-144px] py-[14px] px-[24px] flex flex-col items-center justify-center text-center col-span-2 sm:col-span-1">
-                                                <Image src="/images/ticket.svg" alt="ticket" width="40.74px" height="40.54px" />
+                                                <Image src="/images/ticket.svg" alt="ticket" width="51px" height="51px" />
 
                                                 <span className="gradient mt-[15px] text-sm font-semibold">
                                                     <span className="font-bold text-xl inline-block">
@@ -156,7 +162,7 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                                             <ul className="color-imgs flex items-center h-hcalc34">
                                                 {selectedItem.images.map((image, i) => (  
                                                     <li className="rounded-t-[4px] overflow-hidden mr-[16px] w-[46px] h-[100%]" key={i}>
-                                                        <Image src={image} alt={selectedItem.title} width="100%" height="100%" objectFit="cover" />
+                                                        <img src={image} alt={selectedItem.title} className="w-[100%] h-[100%] object-cover" />
                                                     </li>
                                                 ))}
                                             </ul>

@@ -50,7 +50,7 @@ const Header = () => {
                                 TRY
                             </div>
                         </div>
-                        <Image src="/images/down.svg" alt="down-arrow" width="4px" height="6px" />
+                        <Image src="/images/down.svg" alt="down-arrow" width="6px" height="4px" />
                     </div>
 
                     <form role="form" className="hidden 2md:block relative mx-[20px] 2xl:mr-[46px]">

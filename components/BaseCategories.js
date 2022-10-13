@@ -106,7 +106,7 @@ const BaseCategories = () => {
                                                     TRY
                                                 </div>
                                             </div>
-                                            <Image src="/images/down.svg" alt="down-arrow" width="4px" height="6px" />
+                                            <Image src="/images/down.svg" alt="down-arrow" width="6px" height="4px" />
                                         </div>
                                     </div>
 

@@ -137,7 +137,9 @@ const Footer = () => {
                                 <li className="mt-[20px]">
                                     <Link href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                                         <a className="text-sm hover:underline flex items-center">
-                                            <Image src="/images/facebook.svg" alt="facebook" width="24px" height="23.97px" className="mr-[15px]" />
+                                            <div className="mr-[15px] relative top-[2px]">
+                                                <Image src="/images/facebook.svg" alt="facebook" width="24px" height="23.97px" />
+                                            </div>
                                             Facebook
                                         </a>
                                     </Link>
@@ -146,7 +148,9 @@ const Footer = () => {
                                 <li className="mt-[20px]">
                                     <Link href="https://www.instagram.com/" target="_blank" rel="noreferrer">
                                         <a className="text-sm hover:underline flex items-center">
-                                            <Image src="/images/instagram.svg" alt="instagram" width="24px" height="23.97px" className="mr-[15px]" />
+                                            <div className="mr-[15px] relative top-[2px]">
+                                                <Image src="/images/instagram.svg" alt="instagram" width="24px" height="23.97px" />
+                                            </div>
                                             Instagram
                                         </a>
                                     </Link>
@@ -155,7 +159,9 @@ const Footer = () => {
                                 <li className="mt-[20px]">
                                     <Link href="https://twitter.com/" target="_blank" rel="noreferrer">
                                         <a className="text-sm hover:underline flex items-center">
-                                            <Image src="/images/twitter.svg" alt="twitter" width="24px" height="23.97px" className="mr-[15px]" />
+                                            <div className="mr-[15px] relative top-[2px]">
+                                                <Image src="/images/twitter.svg" alt="twitter" width="24px" height="23.97px" />
+                                            </div>
                                             Twitter
                                         </a>
                                     </Link>
@@ -164,7 +170,9 @@ const Footer = () => {
                                 <li className="mt-[20px]">
                                     <Link href="http://www.youtube.com/" target="_blank" rel="noreferrer">
                                         <a className="text-sm hover:underline flex items-center">
-                                            <Image src="/images/youtube.svg" alt="youtube" width="24px" height="23.97px" className="mr-[15px]" />
+                                            <div className="mr-[15px] relative top-[2px]">
+                                                <Image src="/images/youtube.svg" alt="youtube" width="24px" height="23.97px" />
+                                            </div>
                                             Youtube
                                         </a>
                                     </Link>
@@ -228,8 +236,12 @@ const Footer = () => {
 
                         <div className="foot-list xl:col-span-3">
                             <div className="flex items-center lg:justify-end">
-                                <Image src="/images/mastercard.svg" alt="mastercard" width="36px" height="28px" className="lg:ml-[40px]" />
-                                <Image src="/images/visa.svg" alt="visa" width="52px" height="16px" className="ml-[10px] sm:ml-[40px]" />
+                                <div className="lg:ml-[40px]">
+                                    <Image src="/images/mastercard.svg" alt="mastercard" width="36px" height="28px" />
+                                </div>
+                                <div className="ml-[10px] sm:ml-[40px]">
+                                    <Image src="/images/visa.svg" alt="visa" width="52px" height="16px" />
+                                </div>
                             </div>
                         </div>
                     </div>

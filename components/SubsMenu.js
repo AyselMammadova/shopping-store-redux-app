@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
-import banner from '../public/images/banner.svg'
 
 export const SubsMenu = () => {
 
@@ -103,7 +102,9 @@ export const SubsMenu = () => {
 
                                     <li className="mt-[10px] text-base text-grey4 flex items-center">
                                         Daha çok 
-                                        <Image src="/images/down-a.svg" alt="down" width="4px" height="6px" className="ml-[7px] relative top-[1px]" />
+                                        <div className="ml-[7px] relative -top-[2px]">
+                                            <Image src="/images/down-a.svg" alt="down" width="6px" height="4px" />
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -184,7 +185,9 @@ export const SubsMenu = () => {
 
                                     <li className="mt-[10px] text-base text-grey4 flex items-center">
                                         Daha çok 
-                                        <Image src="/images/down-a.svg" alt="down" width="4px" height="6px" className="ml-[7px] relative top-[1px]" />
+                                        <div className="ml-[7px] relative -top-[2px]">
+                                            <Image src="/images/down-a.svg" alt="down" width="6px" height="4px" />
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -265,7 +268,9 @@ export const SubsMenu = () => {
 
                                     <li className="mt-[10px] text-base text-grey4 flex items-center">
                                         Daha çok 
-                                        <Image src="/images/down-a.svg" alt="down" width="4px" height="6px" className="ml-[7px] relative top-[1px]" />
+                                        <div className="ml-[7px] relative -top-[2px]">
+                                            <Image src="/images/down-a.svg" alt="down" width="6px" height="4px" />
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -346,14 +351,16 @@ export const SubsMenu = () => {
 
                                     <li className="mt-[10px] text-base text-grey4 flex items-center">
                                         Daha çok 
-                                        <Image src="/images/down-a.svg" alt="down" width="4px" height="6px" className="ml-[7px] relative top-[1px]" />
+                                        <div className="ml-[7px] relative -top-[2px]">
+                                            <Image src="/images/down-a.svg" alt="down" width="6px" height="4px" />
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div className="banner col-span-2 hidden 2md:block">
-                        <img src={banner} alt="banner" />
+                        <img src="/images/banner.svg" alt="banner" />
                     </div>
                 </div>
             </div>

@@ -66,12 +66,10 @@ const Cart = ({ close }) => {
                                     key={cartItem.id}
                                   >
                                       <div className="img-wrap w-[67px] h-[101px] border border-solid border-grey6 mr-[20px]">
-                                          <Image
+                                          <img
                                             src={cartItem.images[0]}
                                             alt={cartItem.title}
-                                            width="100%" 
-                                            height="100%"
-                                            objectFit="cover"
+                                            className="w-[100%] h-[100%] object-cover"
                                           />
                                       </div>
                                       <div className="cart-item-info relative w-[70%] pr-[15px]">

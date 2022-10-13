@@ -86,7 +86,7 @@ const Product = () => {
                             <Link href={`/details/${card.id}`}>
 
                                 <div className="img-wrap h-[100%] relative block cursor-pointer">
-                                    <Image src={card.images[0]} alt={card.title} width="100%" height="100%" objectFit="cover" />
+                                    <img src={card.images[0]} alt={card.title} className="w-[100%] h-[100%] object-cover" />
 
                                     
 
@@ -131,11 +131,21 @@ const Product = () => {
                             </h6>
 
                             <div className="stars flex my-[7px]">
-                                <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" className="mr-[5px]" />
-                                <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" className="mr-[5px]" />
-                                <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" className="mr-[5px]" />
-                                <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" className="mr-[5px]" />
-                                <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" className="mr-[5px]" />
+                                <div className="mr-[5px]">
+                                    <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" />
+                                </div>
+                                <div className="mr-[5px]">
+                                    <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" />
+                                </div>
+                                <div className="mr-[5px]">
+                                    <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" />
+                                </div>
+                                <div className="mr-[5px]">
+                                    <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" />
+                                </div>
+                                <div className="mr-[5px]">
+                                    <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" />
+                                </div>
                             </div>
 
                             <p className="text-tx text-sm mb-0 limited-text">{card.description}</p>

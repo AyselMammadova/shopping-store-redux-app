@@ -70,7 +70,7 @@ const Sidebar = () => {
             <div className="filter-wrap pb-[20px] border-b border-b-solid border-b-bord1">
                 <div className="flex items-center justify-between text-red text-base font-semibold mb-[20px] cursor-pointer">
                     İlgili Kategoriler
-                    <Image src="/images/red-down.svg" alt="down" width="5.33px" height="8px" />
+                    <Image src="/images/red-down.svg" alt="down" width="8" height="6px" />
                 </div>
                 <div className="filter-items max-h-[184px] overflow-y-scroll scrollbar pr-[20px]">
                     {cats.map((cat) => (
@@ -89,7 +89,7 @@ const Sidebar = () => {
             <div className="filter-wrap py-[20px] border-b border-b-solid border-b-bord1">
                 <div className="flex items-center justify-between text-red text-base font-semibold mb-[20px] cursor-pointer">
                     Cinsiyet
-                    <Image src="/images/red-down.svg" alt="down" width="5.33px" height="8px" />
+                    <Image src="/images/red-down.svg" alt="down" width="8" height="6px" />
                 </div>
                 <div className="filter-items max-h-[190px] pr-[20px]">
                     {genders.map((gender) => (
@@ -112,7 +112,7 @@ const Sidebar = () => {
             <div className="filter-wrap py-[20px] border-b border-b-solid border-b-bord1">
                 <div className="flex items-center justify-between text-red text-base font-semibold mb-[20px] cursor-pointer">
                     Beden
-                    <Image src="/images/red-down.svg" alt="down" width="5.33px" height="8px" />
+                    <Image src="/images/red-down.svg" alt="down" width="8" height="6px" />
                 </div>
                 <div className="filter-items max-h-[190px] pr-[20px]">
                     {sizes.map((size) => (
@@ -135,7 +135,7 @@ const Sidebar = () => {
             <div className="filter-wrap py-[20px] border-b border-b-solid border-b-bord1">
                 <div className="flex items-center justify-between text-red text-base font-semibold mb-[20px] cursor-pointer">
                     Yaş oranı
-                    <Image src="/images/red-down.svg" alt="down" width="5.33px" height="8px" />
+                    <Image src="/images/red-down.svg" alt="down" width="8" height="6px" />
                 </div>
                 <div className="filter-items max-h-[190px] overflow-y-scroll scrollbar pr-[20px]">
                     {ages.map((age) => (
@@ -158,7 +158,7 @@ const Sidebar = () => {
             <div className="filter-wrap py-[20px] border-b border-b-solid border-b-bord1">
                 <div className="flex items-center justify-between text-red text-base font-semibold mb-[20px] cursor-pointer">
                     Renk
-                    <Image src="/images/red-down.svg" alt="down" width="5.33px" height="8px" />
+                    <Image src="/images/red-down.svg" alt="down" width="8" height="6px" />
                 </div>
                 <div className="filter-items max-h-[294px] overflow-y-scroll scrollbar pr-[20px]">
                     {colors.map((color) => (
@@ -178,7 +178,7 @@ const Sidebar = () => {
             <div className="filter-wrap py-[20px] border-b border-b-solid border-b-bord1">
                 <div className="flex items-center justify-between text-red text-base font-semibold mb-[20px] cursor-pointer">
                     Fiyat Aralığı
-                    <Image src="/images/red-down.svg" alt="down" width="5.33px" height="8px" />
+                    <Image src="/images/red-down.svg" alt="down" width="8" height="6px" />
                 </div>
                 <form role="form" className="mb-[30px] price-search flex items-end flex-wrap">
                     <div className="flex items-end mr-[7px]">

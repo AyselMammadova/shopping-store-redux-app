@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import banner from '../public/images/banner.svg'
 
 export const SubsMenu = () => {
 
@@ -352,7 +353,7 @@ export const SubsMenu = () => {
                         </div>
                     </div>
                     <div className="banner col-span-2 hidden 2md:block">
-                        <Image src="/images/banner.svg" alt="banner" width="324.94px" height="508px" />
+                        <img src={banner} alt="banner" />
                     </div>
                 </div>
             </div>

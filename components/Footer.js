@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
     return (
@@ -136,7 +137,7 @@ const Footer = () => {
                                 <li className="mt-[20px]">
                                     <Link href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                                         <a className="text-sm hover:underline flex items-center">
-                                            <img src="/images/facebook.svg" alt="facebook" className="mr-[15px]" />
+                                            <Image src="/images/facebook.svg" alt="facebook" width="24px" height="23.97px" className="mr-[15px]" />
                                             Facebook
                                         </a>
                                     </Link>
@@ -145,7 +146,7 @@ const Footer = () => {
                                 <li className="mt-[20px]">
                                     <Link href="https://www.instagram.com/" target="_blank" rel="noreferrer">
                                         <a className="text-sm hover:underline flex items-center">
-                                            <img src="/images/instagram.svg" alt="instagram" className="mr-[15px]" />
+                                            <Image src="/images/instagram.svg" alt="instagram" width="24px" height="23.97px" className="mr-[15px]" />
                                             Instagram
                                         </a>
                                     </Link>
@@ -154,7 +155,7 @@ const Footer = () => {
                                 <li className="mt-[20px]">
                                     <Link href="https://twitter.com/" target="_blank" rel="noreferrer">
                                         <a className="text-sm hover:underline flex items-center">
-                                            <img src="/images/twitter.svg" alt="twitter" className="mr-[15px]" />
+                                            <Image src="/images/twitter.svg" alt="twitter" width="24px" height="23.97px" className="mr-[15px]" />
                                             Twitter
                                         </a>
                                     </Link>
@@ -163,7 +164,7 @@ const Footer = () => {
                                 <li className="mt-[20px]">
                                     <Link href="http://www.youtube.com/" target="_blank" rel="noreferrer">
                                         <a className="text-sm hover:underline flex items-center">
-                                            <img src="/images/youtube.svg" alt="youtube" className="mr-[15px]" />
+                                            <Image src="/images/youtube.svg" alt="youtube" width="24px" height="23.97px" className="mr-[15px]" />
                                             Youtube
                                         </a>
                                     </Link>
@@ -227,8 +228,8 @@ const Footer = () => {
 
                         <div className="foot-list xl:col-span-3">
                             <div className="flex items-center lg:justify-end">
-                                <img src="/images/mastercard.svg" alt="mastercard" className="lg:ml-[40px]" />
-                                <img src="/images/visa.svg" alt="visa" className="ml-[10px] sm:ml-[40px]" />
+                                <Image src="/images/mastercard.svg" alt="mastercard" width="36px" height="28px" className="lg:ml-[40px]" />
+                                <Image src="/images/visa.svg" alt="visa" width="52px" height="16px" className="ml-[10px] sm:ml-[40px]" />
                             </div>
                         </div>
                     </div>

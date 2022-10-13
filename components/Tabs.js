@@ -3,6 +3,7 @@ import Product from "./Product";
 import Sidebar from "./Sidebar";
 import Tags from "./Tags";
 import Select from "react-select";
+import Image from "next/image";
 
 
 const Tabs = () => {
@@ -72,7 +73,7 @@ const Tabs = () => {
         <div className="w-[100%]">
           <div className="mb-[20px] flex flex-wrap items-center justify-between rounded-[15px] bg-white py-[10px] px-[20px]">
             <div className="all-products flex items-center">
-              <img src="/images/shop.svg" alt="shop" className="mr-[10px]" />
+              <Image src="/images/shop.svg" alt="shop" widht="16px" height="15px" className="mr-[10px]" />
               <p className="mb-0 text-xxsm font-semibold text-black">
                 Ürün sayı:
                 <span className="font-normal text-red ml-[6px]">23244</span>

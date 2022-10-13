@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useSelector } from "react-redux";
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 const  Cart = dynamic(() => import('./Cart'), { ssr: false })
 
 
@@ -22,7 +23,7 @@ const Header = () => {
                     <Link href="/">
                         <a className="mr-auto 3xl:mr-[52px]">
                             <span className="sr-only">Your Company</span>
-                            <img src="/images/logo.svg" alt="logo" className="w-[120px] ssm:w-auto" />
+                            <Image src="/images/logo.svg" alt="logo" width="173px" height="36.04px" />
                         </a>
                     </Link>
 
@@ -40,7 +41,7 @@ const Header = () => {
 
                     <div className="hidden xl:flex drop-lang items-center mx-[20px] 2xl:mx-[76px] cursor-pointer">
                         <div className="flex items-center">
-                            <img src="/images/tr.svg" alt="tr" className="mr-[7px]" />
+                            <Image src="/images/tr.svg" alt="tr" className="mr-[7px]" width="19px" height="14px" />
                             <div>
                                 İstanbul  
                                 <span className="text-grey relative -top-[1px] mx-[7px]">|</span>  
@@ -49,14 +50,14 @@ const Header = () => {
                                 TRY
                             </div>
                         </div>
-                        <img src="/images/down.svg" alt="down-arrow" className="ml-[10px]" />
+                        <Image src="/images/down.svg" alt="down-arrow" className="ml-[10px]" width="4px" height="6px" />
                     </div>
 
                     <form role="form" className="hidden 2md:block relative mx-[20px] 2xl:mr-[46px]">
                         <label className="relative block">
                             <span className="sr-only">Search</span>
                             <span className="absolute top-[50%] -translate-y-2/4 left-0 flex items-center pl-[14px]">
-                                <img src="/images/search.svg" alt="search" />
+                                <Image src="/images/search.svg" alt="search" width="19.77px" height="19.77px" />
                             </span>
                             <input 
                                 className="placeholder:text-grey1 placeholder:text-base bg-light block 
@@ -74,14 +75,14 @@ const Header = () => {
                     
                     <Link href="#">
                         <a className="flex flex-col justify-center items-center text-sm text-black hover:text-red ml-[20px] 2xl:ml-[50px]">
-                            <img src="/images/order.svg" alt="orders" className="ssm:mb-[8px]" />
+                            <Image src="/images/order.svg" alt="orders" className="ssm:mb-[8px]" width="22px" height="22px" />
                             <span className="hidden ssm:inline">Siparişlerim</span>
                         </a>
                     </Link>
 
                     <Link href="#">
                         <a className="flex flex-col justify-center items-center text-sm text-black hover:text-red ml-[20px] 2xl:ml-[50px]">
-                            <img src="/images/fav.svg" alt="fav" className="ssm:mb-[8px]" />
+                            <Image src="/images/fav.svg" alt="fav" className="ssm:mb-[8px]" width="22px" height="20px" />
                             <span className="hidden ssm:inline">Favorilerim</span>
                         </a>
                     </Link>
@@ -91,7 +92,7 @@ const Header = () => {
                         type="button" onClick={handleOpen}
                         >
                             <div className="relative">
-                                <img src="/images/cart.svg" alt="cart" className="ssm:mb-[8px]" />
+                                <Image src="/images/cart.svg" alt="cart" className="ssm:mb-[8px]" width="17px" height="20px" />
                                 <span className="absolute -top-[2px] -right-[17px] rounded-[50%] bg-red w-[16px] h-[16px] text-xsm text-white flex items-center justify-center">
                                     {cartTotalQuantity}
                                 </span>

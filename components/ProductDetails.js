@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from 'next/router';
 import DetailModal from './DetailModal';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 const ProductDetails = () => {
@@ -169,25 +170,25 @@ const ProductDetails = () => {
                         <div className="imgs-slider flex col-span-5 xl:col-span-2 mb-[30px]  xl:mb-0 justify-center xl:justify-start">
                             <div className="slider-navs w-[120px]">
                                 <div className="upslide shadow-shadow8 cursor-pointer h-[30px] flex items-center justify-center">
-                                    <img src="/images/up.svg" alt="up" />
+                                    <Image src="/images/up.svg" alt="up" width="6.01px" height="10.51px" />
                                 </div>
                                 <ul style={{height: 'calc(100% - 60px)'}}>
                                     {selectedItem.images.map((image, i) => (
                                         <li style={{height: '33.33%'}} key={i}>
-                                            <img src={image} alt={selectedItem.title} className="w-[100%] h-[100%] object-cover" />
+                                            <Image src={image} alt={selectedItem.title} width="100%" height="100%" objectFit="cover" />
                                         </li>
                                     ))}
                                 </ul>
                                 <div className="downslide shadow-shadow8 cursor-pointer h-[30px] flex items-center justify-center">
-                                    <img src="/images/up.svg" alt="down" className="rotate-180" />
+                                    <Image src="/images/up.svg" alt="down" className="rotate-180" width="6.01px" height="10.51px" />
                                 </div>
                             </div>
 
                             <div className="selected-img w-[400px] h-[100%] relative rounded-[4px] overflow-hidden ml-[30px]">
-                                <img src={selectedItem.images[0]} alt={selectedItem.title} className="w-[100%] h-[100%] object-cover" />
+                                <Image src={selectedItem.images[0]} alt={selectedItem.title} width="100%" height="100%" objectFit="cover" />
 
                                 <div className="sale absolute left-[10px] top-[10px]">
-                                    <img src="/images/sale.svg" alt="sale" />
+                                    <Image src="/images/sale.svg" alt="sale" width="72.81px" height="69.74px" />
                                 </div>
                             </div>
                         </div>
@@ -207,16 +208,21 @@ const ProductDetails = () => {
                                         Satıcı:
                                     </span>
                                     Koton
-                                    <img src="/images/rating.svg" alt="rating-seller" className="ml-[6px] inline relative -top-[1px]" />
+                                    <Image src="/images/rating.svg" alt="rating-seller" width="24px" height="16px" className="ml-[6px] inline relative -top-[1px]" />
                                 </p>
 
                                 <div className="stars flex items-center justify-center xl:justify-start">
                                     <span className="mr-[10px] text-sm font-semibold">4.5</span>
-                                    <img src="/images/star.svg" alt="star" className="mr-[6px] w-[16px]" />
-                                    <img src="/images/star.svg" alt="star" className="mr-[6px] w-[16px]" />
-                                    <img src="/images/star.svg" alt="star" className="mr-[6px] w-[16px]" />
-                                    <img src="/images/star.svg" alt="star" className="mr-[6px] w-[16px]" />
-                                    <img src="/images/star-gray.svg" alt="star-gray" className="mr-[6px]" />
+                                    <Image src="/images/star.svg" alt="star" width="16px" height="16px"
+                                    className="mr-[6px]" />
+                                    <Image src="/images/star.svg" alt="star" width="16px" height="16px"
+                                    className="mr-[6px]" />
+                                    <Image src="/images/star.svg" alt="star" width="16px" height="16px"
+                                    className="mr-[6px]" />
+                                    <Image src="/images/star.svg" alt="star" width="16px" height="16px"
+                                    className="mr-[6px]" />
+                                    <Image src="/images/star-gray.svg" alt="star-gray" width="16px" height="16px"
+                                    className="mr-[6px]" />
                                 </div>
 
                                 <div className="product-price flex items-center justify-center xl:justify-start mt-[12px]">
@@ -243,14 +249,14 @@ const ProductDetails = () => {
                                     <ul className="color-imgs flex items-center h-hcalc34">
                                         {selectedItem.images.map((image, i) => (  
                                             <li className="rounded-t-[4px] overflow-hidden mr-[20px] w-[56px] h-[100%]" key={i}>
-                                                <img src={image} alt={selectedItem.title} className="w-[100%] h-[100%] object-cover" />
+                                                <Image src={image} alt={selectedItem.title} width="100%" height="100%" objectFit="cover" />
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
 
                                 <div className="border border-solid border-grey7 rounded-[4px] h-[155px] py-[14px] px-[24px] flex flex-col items-center justify-center text-center col-span-4 md:col-span-1">
-                                    <img src="/images/car.svg" alt="car" />
+                                    <Image src="/images/car.svg" alt="car" width="38.76px" height="32.96px" />
 
                                     <span className="gradient mt-[15px] text-sm font-semibold">
                                         KARGO BEDAVA
@@ -258,7 +264,7 @@ const ProductDetails = () => {
                                 </div>
 
                                 <div className="border border-solid border-grey7 rounded-[4px] h-[155px] py-[14px] px-[24px] flex flex-col items-center justify-center text-center col-span-3 md:col-span-1">
-                                    <img src="/images/ticket.svg" alt="ticket" />
+                                    <Image src="/images/ticket.svg" alt="ticket" width="40.74px" height="40.54px" />
 
                                     <span className="gradient mt-[15px] text-sm font-semibold">
                                         <span className="font-bold text-xl inline-block">

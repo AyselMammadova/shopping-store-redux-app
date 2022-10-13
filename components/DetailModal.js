@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { Fragment, useEffect, useRef } from 'react';
 import Select from 'react-select';
 
@@ -48,7 +49,7 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                     <div className="modal-content relative mb-[76px]">
                         <div className="close-modal absolute right-[13px] top-[7px] sm:top-[13px] bg-red rounded-[4px] w-[16px] sm:w-[24px] h-[16px] sm:h-[24px] flex items-center justify-center cursor-pointer"
                         onClick={toggleModal}>
-                            <img src="/images/menu-icon.svg" alt="close-modal" className="w-[6px] sm:w-auto" />
+                            <Image src="/images/menu-icon.svg" alt="close-modal" width="8px" height="8px" />
                         </div>
                         {selectedItem && 
                             <div key={selectedItem.id} className="detail-wrapper bg-white rounded-[8px] px-[15px] sm:px-[44px] pt-[30px] sm:pt-[44px] pb-[15px] sm:pb-[48px] shadow-shadow11">
@@ -56,25 +57,25 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                                     <div className="imgs-slider flex col-span-5 xl:col-span-2 mb-0 justify-center xl:justify-start">
                                         <div className="slider-navs w-[104px]">
                                             <div className="upslide shadow-shadow8 cursor-pointer h-[30px] flex items-center justify-center">
-                                                <img src="/images/up.svg" alt="up" />
+                                                <Image src="/images/up.svg" alt="up" width="6.01px" height="10.51px" />
                                             </div>
                                             <ul style={{height: 'calc(100% - 60px)'}}>
                                                 {selectedItem.images.map((image, i) => (
                                                     <li style={{height: '33.33%'}} key={i}>
-                                                        <img src={image} alt={selectedItem.title} className="w-[100%] h-[100%] object-cover" />
+                                                        <Image src={image} alt={selectedItem.title} width="100%" height="100%" objectFit="cover" />
                                                     </li>
                                                 ))}
                                             </ul>
                                             <div className="downslide shadow-shadow8 cursor-pointer h-[30px] flex items-center justify-center">
-                                                <img src="/images/up.svg" alt="down" className="rotate-180" />
+                                                <Image src="/images/up.svg" alt="down" className="rotate-180" width="6.01px" height="10.51px" />
                                             </div>
                                         </div>
 
                                         <div className="selected-img w-[400px] h-[100%] relative rounded-[4px] overflow-hidden ml-[30px]">
-                                            <img src={selectedItem.images[0]} alt={selectedItem.title} className="w-[100%] h-[100%] object-cover" />
+                                            <Image src={selectedItem.images[0]} alt={selectedItem.title} width="100%" height="100%" objectFit="cover" />
 
                                             <div className="sale absolute left-[10px] top-[10px]">
-                                                <img src="/images/sale.svg" alt="sale" />
+                                                <Image src="/images/sale.svg" alt="sale" width="72.81px" height="69.74px" />
                                             </div>
                                         </div>
                                     </div>
@@ -94,16 +95,22 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                                                         Satıcı:
                                                     </span>
                                                     Koton
-                                                    <img src="/images/rating.svg" alt="rating-seller" className="ml-[6px] inline relative -top-[1px]" />
+                                                    <Image src="/images/rating.svg" alt="rating-seller" width="24px" height="16px"
+                                                    className="ml-[6px] inline relative -top-[1px]" />
                                                 </p>
 
                                                 <div className="stars flex items-center">
                                                     <span className="mr-[10px] text-sm font-semibold">4.5</span>
-                                                    <img src="/images/star.svg" alt="star" className="mr-[6px] w-[16px]" />
-                                                    <img src="/images/star.svg" alt="star" className="mr-[6px] w-[16px]" />
-                                                    <img src="/images/star.svg" alt="star" className="mr-[6px] w-[16px]" />
-                                                    <img src="/images/star.svg" alt="star" className="mr-[6px] w-[16px]" />
-                                                    <img src="/images/star-gray.svg" alt="star-gray" className="mr-[6px]" />
+                                                    <Image src="/images/star.svg" alt="star" width="16px" height="16px"
+                                                    className="mr-[6px]" />
+                                                    <Image src="/images/star.svg" alt="star" width="16px" height="16px"
+                                                    className="mr-[6px]" />
+                                                    <Image src="/images/star.svg" alt="star" width="16px" height="16px"
+                                                    className="mr-[6px]" />
+                                                    <Image src="/images/star.svg" alt="star" width="16px" height="16px"
+                                                    className="mr-[6px]" />
+                                                    <Image src="/images/star-gray.svg" alt="star-gray" width="16px" height="16px"
+                                                    className="mr-[6px]" />
                                                 </div>
 
                                                 <div className="product-price flex items-center mt-[12px]">
@@ -122,7 +129,7 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                                             </div>
 
                                             <div className="border border-solid border-grey7 rounded-[4px] h-144px] py-[14px] px-[24px] flex flex-col items-center justify-center text-center col-span-3 sm:col-span-1">
-                                                <img src="/images/car.svg" alt="car" />
+                                                <Image src="/images/car.svg" alt="car" width="38.76px" height="32.96px" />
 
                                                 <span className="gradient mt-[15px] text-sm font-semibold">
                                                     KARGO BEDAVA
@@ -130,7 +137,7 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                                             </div>
 
                                             <div className="border border-solid border-grey7 rounded-[4px] h-144px] py-[14px] px-[24px] flex flex-col items-center justify-center text-center col-span-2 sm:col-span-1">
-                                                <img src="/images/ticket.svg" alt="ticket" />
+                                                <Image src="/images/ticket.svg" alt="ticket" width="40.74px" height="40.54px" />
 
                                                 <span className="gradient mt-[15px] text-sm font-semibold">
                                                     <span className="font-bold text-xl inline-block">
@@ -149,7 +156,7 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                                             <ul className="color-imgs flex items-center h-hcalc34">
                                                 {selectedItem.images.map((image, i) => (  
                                                     <li className="rounded-t-[4px] overflow-hidden mr-[16px] w-[46px] h-[100%]" key={i}>
-                                                        <img src={image} alt={selectedItem.title} className="w-[100%] h-[100%] object-cover" />
+                                                        <Image src={image} alt={selectedItem.title} width="100%" height="100%" objectFit="cover" />
                                                     </li>
                                                 ))}
                                             </ul>

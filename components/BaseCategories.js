@@ -97,7 +97,7 @@ const BaseCategories = () => {
                                     <div className="px-[10px] ssm:px-[20px] py-[18px] block xl:hidden ">
                                         <div className="flex drop-lang items-center cursor-pointer">
                                             <div className="flex items-center">
-                                                <img src="/images/tr.svg" alt="tr" className="mr-[7px]" />
+                                                <Image src="/images/tr.svg" alt="tr" className="mr-[7px]" width="19px" height="14px" />
                                                 <div>
                                                     İstanbul  
                                                     <span className="text-grey relative -top-px mx-[7px]">|</span>  
@@ -106,7 +106,7 @@ const BaseCategories = () => {
                                                     TRY
                                                 </div>
                                             </div>
-                                            <img src="/images/down.svg" alt="down-arrow" className="ml-[10px]" />
+                                            <Image src="/images/down.svg" alt="down-arrow" className="ml-[10px]" width="4px" height="6px" />
                                         </div>
                                     </div>
 
@@ -115,7 +115,7 @@ const BaseCategories = () => {
                                             <label className="relative block mb-[10px] ssm:mb-0">
                                                 <span className="sr-only">Search</span>
                                                 <span className="absolute top-[50%] -translate-y-2/4 left-0 flex items-center pl-[14px]">
-                                                    <img src="/images/search.svg" alt="search" />
+                                                    <Image src="/images/search.svg" alt="search" width="19.77px" height="19.77px" />
                                                 </span>
                                                 <input 
                                                     className="placeholder:text-grey1 placeholder:text-base bg-light block 

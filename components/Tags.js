@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 
@@ -23,7 +24,7 @@ const Tags = () => {
                         {tag.name}
                     </div>
                     <div className="remove-tag ml-[8px] relative top-[1px]">
-                        <img src="/images/close.svg" alt="remove-tag" className="w-[8px]" />
+                        <Image src="/images/close.svg" alt="remove-tag" width="8px" height="8px" />
                     </div>
                 </div>
             ))}

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 
 const Up = () => {
@@ -28,11 +29,11 @@ const Up = () => {
                     <button className="border border-solid border-red bg-white text-white rounded-[50%] w-[40px] h-[40px] flex items-center justify-center"
                     style={{filter: 'drop-shadow(0px 4px 4px rgba(217, 7, 9, 0.23))'}}
                     onClick={scrollUp}>
-                        <img src="/images/red-down-shadow.svg" alt="down" className="relative top-[3px]" />
+                        <Image src="/images/red-down-shadow.svg" alt="down" width="8px" height="14px" className="relative top-[3px]" />
                     </button>
 
                     <div className="chat mt-[30px] cursor-pointer">
-                        <img src="/images/chat.svg" alt="chat" />
+                        <Image src="/images/chat.svg" alt="chat" width="60px" height="60px" />
                     </div>
                 </div>
             ) : null}

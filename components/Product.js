@@ -5,6 +5,7 @@ import { GetProductList } from '../redux/features/productSlice';
 import { addToCart } from "../redux/features/cartSlice";
 import InfiniteScroll from 'react-infinite-scroll-component';
 import FadeLoader from 'react-spinners/FadeLoader';
+import Image from 'next/image';
 
 
 const Product = () => {
@@ -85,20 +86,20 @@ const Product = () => {
                             <Link href={`/details/${card.id}`}>
 
                                 <div className="img-wrap h-[100%] relative block cursor-pointer">
-                                    <img src={card.images[0]} alt={card.title} className="w-[100%] h-[100%] object-cover" />
+                                    <Image src={card.images[0]} alt={card.title} width="100%" height="100%" objectFit="cover" />
 
                                     
 
                                     <div className="sale absolute left-[10px] top-[10px]">
-                                        <img src="/images/sale.svg" alt="sale" />
+                                        <Image src="/images/sale.svg" alt="sale" width="59.55px" height="57px" />
                                     </div>
 
                                     <div className="fast absolute left-0 bottom-[17px]">
-                                        <img src="/images/fast.svg" alt="fast" />
+                                        <Image src="/images/fast.svg" alt="fast" width="62px" height="31px" />
                                     </div>
 
                                     <div className={`${isHover[card.id] ? 'opacity-1' : 'opacity-0'} bigger-wrap transition ease-in duration-150 absolute top-[50%] left-[50%] -translate-x-2/4 -translate-y-2/4 z-10`}>
-                                        <img src="/images/bigger.svg" alt="bigger" />
+                                        <Image src="/images/bigger.svg" alt="bigger" width="64px" height="64px" />
                                     </div>
 
                                     <div className={`${isHover[card.id] ? 'opacity-1' : 'opacity-0'} sizes-wrapper transition ease-in duration-150 absolute left-[20px] right-[20px] bottom-[60px] z-10 rounded-[4px] bg-lwhite5 flex justify-between items-center h-[40px] px-[18px]`}>
@@ -130,11 +131,11 @@ const Product = () => {
                             </h6>
 
                             <div className="stars flex my-[7px]">
-                                <img src="/images/star.svg" alt="star" className="mr-[5px]" />
-                                <img src="/images/star.svg" alt="star" className="mr-[5px]" />
-                                <img src="/images/star.svg" alt="star" className="mr-[5px]" />
-                                <img src="/images/star.svg" alt="star" className="mr-[5px]" />
-                                <img src="/images/star.svg" alt="star" className="mr-[5px]" />
+                                <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" className="mr-[5px]" />
+                                <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" className="mr-[5px]" />
+                                <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" className="mr-[5px]" />
+                                <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" className="mr-[5px]" />
+                                <Image src="/images/star.svg" alt="star" width="13.74px" height="13.74px" className="mr-[5px]" />
                             </div>
 
                             <p className="text-tx text-sm mb-0 limited-text">{card.description}</p>

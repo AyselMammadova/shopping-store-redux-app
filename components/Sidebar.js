@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 
@@ -69,7 +70,7 @@ const Sidebar = () => {
             <div className="filter-wrap pb-[20px] border-b border-b-solid border-b-bord1">
                 <div className="flex items-center justify-between text-red text-base font-semibold mb-[20px] cursor-pointer">
                     İlgili Kategoriler
-                    <img src="/images/red-down.svg" alt="down" />
+                    <Image src="/images/red-down.svg" alt="down" width="5.33px" height="8px" />
                 </div>
                 <div className="filter-items max-h-[184px] overflow-y-scroll scrollbar pr-[20px]">
                     {cats.map((cat) => (
@@ -88,7 +89,7 @@ const Sidebar = () => {
             <div className="filter-wrap py-[20px] border-b border-b-solid border-b-bord1">
                 <div className="flex items-center justify-between text-red text-base font-semibold mb-[20px] cursor-pointer">
                     Cinsiyet
-                    <img src="/images/red-down.svg" alt="down" />
+                    <Image src="/images/red-down.svg" alt="down" width="5.33px" height="8px" />
                 </div>
                 <div className="filter-items max-h-[190px] pr-[20px]">
                     {genders.map((gender) => (
@@ -111,7 +112,7 @@ const Sidebar = () => {
             <div className="filter-wrap py-[20px] border-b border-b-solid border-b-bord1">
                 <div className="flex items-center justify-between text-red text-base font-semibold mb-[20px] cursor-pointer">
                     Beden
-                    <img src="/images/red-down.svg" alt="down" />
+                    <Image src="/images/red-down.svg" alt="down" width="5.33px" height="8px" />
                 </div>
                 <div className="filter-items max-h-[190px] pr-[20px]">
                     {sizes.map((size) => (
@@ -134,7 +135,7 @@ const Sidebar = () => {
             <div className="filter-wrap py-[20px] border-b border-b-solid border-b-bord1">
                 <div className="flex items-center justify-between text-red text-base font-semibold mb-[20px] cursor-pointer">
                     Yaş oranı
-                    <img src="/images/red-down.svg" alt="down" />
+                    <Image src="/images/red-down.svg" alt="down" width="5.33px" height="8px" />
                 </div>
                 <div className="filter-items max-h-[190px] overflow-y-scroll scrollbar pr-[20px]">
                     {ages.map((age) => (
@@ -157,7 +158,7 @@ const Sidebar = () => {
             <div className="filter-wrap py-[20px] border-b border-b-solid border-b-bord1">
                 <div className="flex items-center justify-between text-red text-base font-semibold mb-[20px] cursor-pointer">
                     Renk
-                    <img src="/images/red-down.svg" alt="down" />
+                    <Image src="/images/red-down.svg" alt="down" width="5.33px" height="8px" />
                 </div>
                 <div className="filter-items max-h-[294px] overflow-y-scroll scrollbar pr-[20px]">
                     {colors.map((color) => (
@@ -177,7 +178,7 @@ const Sidebar = () => {
             <div className="filter-wrap py-[20px] border-b border-b-solid border-b-bord1">
                 <div className="flex items-center justify-between text-red text-base font-semibold mb-[20px] cursor-pointer">
                     Fiyat Aralığı
-                    <img src="/images/red-down.svg" alt="down" />
+                    <Image src="/images/red-down.svg" alt="down" width="5.33px" height="8px" />
                 </div>
                 <form role="form" className="mb-[30px] price-search flex items-end flex-wrap">
                     <div className="flex items-end mr-[7px]">
@@ -199,7 +200,7 @@ const Sidebar = () => {
                     </div>
 
                     <button className="rounded-[4px] bg-red w-[84px] mt-[8px] xl:mt-0 xl:w-[68px] h-[40px] flex items-center justify-center">
-                        <img src="/images/w-search.svg" alt="search" />
+                        <Image src="/images/w-search.svg" alt="search" width="16px" height="16px" />
                     </button>
                     
                 </form>

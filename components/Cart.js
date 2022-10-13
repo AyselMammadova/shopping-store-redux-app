@@ -7,6 +7,7 @@ import {
 } from "../redux/features/cartSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
+import Image from "next/image";
 
 const Cart = ({ close }) => {
   const cart = useSelector((state) => state.cart);
@@ -44,7 +45,7 @@ const Cart = ({ close }) => {
               </h4>
 
               <div className="close-cart cursor-pointer" onClick={close}>
-                  <img src="/images/close2.svg" alt="close-cart" />
+                  <Image src="/images/close2.svg" alt="close-cart" width="16px" height="16px" />
               </div>
           </div>
 
@@ -65,10 +66,12 @@ const Cart = ({ close }) => {
                                     key={cartItem.id}
                                   >
                                       <div className="img-wrap w-[67px] h-[101px] border border-solid border-grey6 mr-[20px]">
-                                          <img
+                                          <Image
                                             src={cartItem.images[0]}
                                             alt={cartItem.title}
-                                            className="w-[100%] h-[100%] object-cover"
+                                            width="100%" 
+                                            height="100%"
+                                            objectFit="cover"
                                           />
                                       </div>
                                       <div className="cart-item-info relative w-[70%] pr-[15px]">
@@ -110,7 +113,7 @@ const Cart = ({ close }) => {
                                             className="absolute -right-[15px] top-0"
                                             onClick={() => handleRemoveFromCart(cartItem)}
                                           >
-                                            <img src="/images/close.svg" alt="remove-item" />
+                                            <Image src="/images/close.svg" alt="remove-item" width="8px" height="8px" />
                                           </button>
                                       </div>
                                   </div>

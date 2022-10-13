@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useState } from 'react'
 
 export const SubsMenu = () => {
@@ -101,7 +102,7 @@ export const SubsMenu = () => {
 
                                     <li className="mt-[10px] text-base text-grey4 flex items-center">
                                         Daha çok 
-                                        <img src="/images/down-a.svg" alt="down" className="ml-[7px] relative top-[1px]" />
+                                        <Image src="/images/down-a.svg" alt="down" width="4px" height="6px" className="ml-[7px] relative top-[1px]" />
                                     </li>
                                 </ul>
                             </div>
@@ -182,7 +183,7 @@ export const SubsMenu = () => {
 
                                     <li className="mt-[10px] text-base text-grey4 flex items-center">
                                         Daha çok 
-                                        <img src="/images/down-a.svg" alt="down" className="ml-[7px] relative top-[1px]" />
+                                        <Image src="/images/down-a.svg" alt="down" width="4px" height="6px" className="ml-[7px] relative top-[1px]" />
                                     </li>
                                 </ul>
                             </div>
@@ -263,7 +264,7 @@ export const SubsMenu = () => {
 
                                     <li className="mt-[10px] text-base text-grey4 flex items-center">
                                         Daha çok 
-                                        <img src="/images/down-a.svg" alt="down" className="ml-[7px] relative top-[1px]" />
+                                        <Image src="/images/down-a.svg" alt="down" width="4px" height="6px" className="ml-[7px] relative top-[1px]" />
                                     </li>
                                 </ul>
                             </div>
@@ -344,14 +345,14 @@ export const SubsMenu = () => {
 
                                     <li className="mt-[10px] text-base text-grey4 flex items-center">
                                         Daha çok 
-                                        <img src="/images/down-a.svg" alt="down" className="ml-[7px] relative top-[1px]" />
+                                        <Image src="/images/down-a.svg" alt="down" width="4px" height="6px" className="ml-[7px] relative top-[1px]" />
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div className="banner col-span-2 hidden 2md:block">
-                        <img src="/images/banner.svg" alt="banner" />
+                        <Image src="/images/banner.svg" alt="banner" width="324.94px" height="508px" />
                     </div>
                 </div>
             </div>

@@ -97,8 +97,8 @@ const BaseCategories = () => {
                                     <div className="px-[10px] ssm:px-[20px] py-[18px] block xl:hidden ">
                                         <div className="flex drop-lang items-center cursor-pointer">
                                             <div className="flex items-center">
-                                                <Image src="/images/tr.svg" alt="tr" className="mr-[7px]" width="19px" height="14px" />
-                                                <div>
+                                                <Image src="/images/tr.svg" alt="tr" width="19px" height="14px" />
+                                                <div className="ml-[7px] mr-[10px]">
                                                     İstanbul  
                                                     <span className="text-grey relative -top-px mx-[7px]">|</span>  
                                                     TR  
@@ -106,7 +106,7 @@ const BaseCategories = () => {
                                                     TRY
                                                 </div>
                                             </div>
-                                            <Image src="/images/down.svg" alt="down-arrow" className="ml-[10px]" width="4px" height="6px" />
+                                            <Image src="/images/down.svg" alt="down-arrow" width="4px" height="6px" />
                                         </div>
                                     </div>
 

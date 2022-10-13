@@ -41,8 +41,8 @@ const Header = () => {
 
                     <div className="hidden xl:flex drop-lang items-center mx-[20px] 2xl:mx-[76px] cursor-pointer">
                         <div className="flex items-center">
-                            <Image src="/images/tr.svg" alt="tr" className="mr-[7px]" width="19px" height="14px" />
-                            <div>
+                            <Image src="/images/tr.svg" alt="tr" width="19px" height="14px" />
+                            <div className="ml-[7px] mr-[10px]">
                                 İstanbul  
                                 <span className="text-grey relative -top-[1px] mx-[7px]">|</span>  
                                 TR  
@@ -50,7 +50,7 @@ const Header = () => {
                                 TRY
                             </div>
                         </div>
-                        <Image src="/images/down.svg" alt="down-arrow" className="ml-[10px]" width="4px" height="6px" />
+                        <Image src="/images/down.svg" alt="down-arrow" width="4px" height="6px" />
                     </div>
 
                     <form role="form" className="hidden 2md:block relative mx-[20px] 2xl:mr-[46px]">
@@ -75,15 +75,15 @@ const Header = () => {
                     
                     <Link href="#">
                         <a className="flex flex-col justify-center items-center text-sm text-black hover:text-red ml-[20px] 2xl:ml-[50px]">
-                            <Image src="/images/order.svg" alt="orders" className="ssm:mb-[8px]" width="22px" height="22px" />
-                            <span className="hidden ssm:inline">Siparişlerim</span>
+                            <Image src="/images/order.svg" alt="orders" width="22px" height="22px" />
+                            <span className="hidden ssm:inline ssm:mt-[8px]">Siparişlerim</span>
                         </a>
                     </Link>
 
                     <Link href="#">
                         <a className="flex flex-col justify-center items-center text-sm text-black hover:text-red ml-[20px] 2xl:ml-[50px]">
-                            <Image src="/images/fav.svg" alt="fav" className="ssm:mb-[8px]" width="22px" height="20px" />
-                            <span className="hidden ssm:inline">Favorilerim</span>
+                            <Image src="/images/fav.svg" alt="fav" width="22px" height="20px" />
+                            <span className="hidden ssm:inline ssm:mt-[8px]">Favorilerim</span>
                         </a>
                     </Link>
                     
@@ -92,12 +92,12 @@ const Header = () => {
                         type="button" onClick={handleOpen}
                         >
                             <div className="relative">
-                                <Image src="/images/cart.svg" alt="cart" className="ssm:mb-[8px]" width="17px" height="20px" />
+                                <Image src="/images/cart.svg" alt="cart" width="17px" height="20px" />
                                 <span className="absolute -top-[2px] -right-[17px] rounded-[50%] bg-red w-[16px] h-[16px] text-xsm text-white flex items-center justify-center">
                                     {cartTotalQuantity}
                                 </span>
                             </div>
-                            <span className="hidden ssm:inline">Sepetim</span>
+                            <span className="hidden ssm:inline ssm:mt-[8px]">Sepetim</span>
                         </div>
                         
                         <div className={`${open ? 'block' : 'hidden'} fixed right-0 top-[90px] z-20 w-[100%] ssm:w-[400px] h-[100vh]`}>

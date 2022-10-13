@@ -377,7 +377,7 @@ const ProductDetails = () => {
                                         </div>
 
                                         <p className="mt-[16px] text-xsm 2xl:text-xssm 2xll:text-xsm font-semibold text-center">
-                                            12 - 26 Haziran
+                                            Fiyat Alarmı
                                         </p>
                                     </div>
 

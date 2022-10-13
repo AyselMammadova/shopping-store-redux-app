@@ -197,7 +197,7 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                                                         </div>
                                                     </div>
 
-                                                    <p className="mt-[16px] text-xsm font-semibold">
+                                                    <p className="mt-[8px] text-xsm font-semibold">
                                                         <span className="text-grey5 mr-[4px]">
                                                             Tahmini Teslimat: 
                                                         </span>
@@ -261,8 +261,8 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                                                         </svg>
                                                     </div>
 
-                                                    <p className="mt-[16px] text-xsm 2xl:text-xssm 2xll:text-xsm font-semibold text-center">
-                                                        12 - 26 Haziran
+                                                    <p className="mt-[8px] text-xsm 2xl:text-xssm 2xll:text-xsm font-semibold text-center">
+                                                        Fiyat Alarmı
                                                     </p>
                                                 </div>
 
@@ -275,7 +275,7 @@ const DetailModal = ({selectedItem, cartItemm, sizes, handleAddToCart, handleDec
                                                         </svg>
                                                     </div>
 
-                                                    <p className="mt-[16px] text-xsm font-semibold text-center">
+                                                    <p className="mt-[8px] text-xsm font-semibold text-center">
                                                         <span className="text-grey5 mr-[4px]">
                                                             Favori: 
                                                         </span>
